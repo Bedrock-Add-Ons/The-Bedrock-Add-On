@@ -36,6 +36,7 @@ A few details implementation details should be noted:
 - All interfaces must be available in the release client. Systems using interfaces only available to Preview will be rejected.
 
 # System Guidelines
+A few systems may have particular guidelines depending on contributor requests…
 
 ## A Word on Art Assets
 Extra care should always be taken in creating art assets to - as near as is comfortably possible - adhere to Vanilla styling and philosophy. Elements to consider include (but are, of course, not limited to):
@@ -43,5 +44,3 @@ Extra care should always be taken in creating art assets to - as near as is comf
 - **Voxels**: Please mind the count of elements for custom models, applying Vanilla proportions and simplification.
 - **Palettes**: Try to limit colours for any textured assets, drawing directly from Vanilla styling where applicable.
 - **Resolution**: Please remain within 16x pixel resolution.
-
-A few systems may have particular guidelines depending on contributor requests…
