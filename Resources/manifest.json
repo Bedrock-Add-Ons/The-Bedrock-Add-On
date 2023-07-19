@@ -1,0 +1,32 @@
+{
+	"format_version": 2,
+	
+	"header": {
+		"name": "pack.name",
+		"description": "pack.description",
+		"uuid": "7513B712-E228-4F0D-8403-D40D9F654944",
+		"version": "0.1.0",
+		
+		"min_engine_version": [1, 20, 10]
+	},
+	"metadata": {
+		"authors": [
+			"Ciosciaa"
+		],
+		"url": "https://github.com/Bedrock-Add-Ons/The-Bedrock-Add-On",
+		"license": "CC BY-NC-SA 4.0"
+	},
+	
+	"modules": [
+		{
+			"type": "resources",
+			"description": "pack.modules.resources.description",
+			"uuid": "C0FC989F-47BE-4609-B70E-59CC6D913967",
+			"version": "0.1.0"
+		}
+	],
+	
+	"dependencies": [
+		{"uuid": "8F71431B-F785-43CC-9920-9C0AF7CDA130", "version": "0.1.0"}
+	]
+}
