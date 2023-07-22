@@ -26,8 +26,8 @@
 			//
 			"scripts": {
 				"pre_animation": [
-					"variable.is_intelligent = query.property('yanasakana:intelligent');",
-					"variable.habitat = query.property('yanasakana:habitat_variant');"
+					"variable.is_intelligent = query.property('bao:intelligent');",
+					"variable.habitat = query.property('bao:habitat_variant');"
 				],
 				"animate": [
 					"setup",
