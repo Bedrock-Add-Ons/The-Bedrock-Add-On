@@ -1,0 +1,26 @@
+{
+    "format_version": "1.20.0",
+    "minecraft:recipe_shaped": {
+      "description": {
+      "identifier": "minecraft:diamond_horse_armor"
+      },
+      "tags": [ "crafting_table" ],
+      "pattern": [
+        "#/#",
+        "###",
+        "# #"
+      ],
+      "key": {
+        "#": {
+          "item": "minecraft:diamond"
+        },
+        "/": {
+          "item": "minecraft:leather"
+        }
+      },
+      "result": {
+        "item": "minecraft:diamond_horse_armor",
+        "count": 1
+      }
+    }
+  }

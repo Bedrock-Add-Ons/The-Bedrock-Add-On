@@ -1,0 +1,29 @@
+{
+  "format_version": "1.20.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "minecraft:brewing_stand"
+    },
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "NBN",
+      " B ",
+      "III"
+    ],
+    "key": {
+      "B": {
+        "item": "minecraft:blaze_rod"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "N":{
+        "item": "minecraft:iron_nugget"
+      }
+    },
+    "result": {
+      "item": "minecraft:brewing_stand"
+    },
+    "priority": -1
+  }
+}
