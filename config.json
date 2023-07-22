@@ -1,0 +1,37 @@
+{
+	"type": "minecraftBedrock",
+	"namespace": "bao",
+	"targetVersion": "1.20.10",
+	"name": "The Bedrock Add-On",
+	"packs": {
+		"behaviorPack": "./Behaviors",
+		"resourcePack": "./Resources"
+	},
+	"regolith": {
+		"dataPath": "./data",
+		"filterDefinitions": {},
+		"profiles": {
+			"default": {
+				"export": {
+					"readOnly": false,
+					"target": "development"
+				},
+				"filters": []
+			}
+		}
+	},
+	"compiler": {
+		"plugins": [
+			[
+				"simpleRewrite",
+				{
+					"packName": "The Bedrock Add-On"
+				}
+			],
+			"formatVersionCorrection"
+		]
+	},
+	"authors": [
+		"Bedrock Add-Ons"
+	]
+}
