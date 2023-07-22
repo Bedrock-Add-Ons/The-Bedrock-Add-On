@@ -4,3 +4,15 @@ pack.description=Resource definitions and assets supporting §o§l§bThe§r §o�
 
 ### Modules
 pack.modules.resources.description=Resource pack for §o§l§bThe§r §o§bBedrock Add-On§r
+
+
+
+
+### Entities
+
+### Interactions
+action.interact.fox_teach=Teach
+
+### Tiles
+
+### Items
