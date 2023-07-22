@@ -1,20 +1,20 @@
 {
     "format_version": "1.20.0",
     "animation_controllers": {
-        "controller.animation.yanasakana.fox_sfx": {
+        "controller.animation.bao.fox_sfx": {
             "initial_state": "initialisation",
             "states": {
                 "initialisation": {
                     "transitions": [
-                        { "pre_intelligent": "!query.property('yanasakana:intelligent')" },
-                        { "post_intelligent": "query.property('yanasakana:intelligent')" }
+                        { "pre_intelligent": "!query.property('bao:intelligent')" },
+                        { "post_intelligent": "query.property('bao:intelligent')" }
                     ]
                 },
                 "pre_intelligent": {
                     "transitions": [
-                        { "post_intelligent": "query.property('yanasakana:intelligent')" }
+                        { "post_intelligent": "query.property('bao:intelligent')" }
                     ],
-                    "on_exit": [ "/playsound random.pop @a[r=10] ~ ~ ~", "/playsound mob.fox.screech @a[r=10] ~ ~ ~", "/particle yanasakana:letters ~ ~0.33 ~" ]
+                    "on_exit": [ "/playsound random.pop @a[r=10] ~ ~ ~", "/playsound mob.fox.screech @a[r=10] ~ ~ ~", "/particle bao:letters ~ ~0.33 ~" ]
                 },
                 "post_intelligent": { }
             }
