@@ -1,6 +1,6 @@
 ## Pack
-pack.name=§o§l§bThe§r §o§bBedrock Add-On§r Resources
-pack.description=Resource definitions and assets supporting §o§l§bThe§r §o§bBedrock Add-On§r
+pack.name=§o§l§bThe§r §o§bBedrock Add-On§r Behaviors
+pack.description=Behavior definitions and assets supporting §o§l§bThe§r §o§bBedrock Add-On§r
 
 ### Modules
-pack.modules.resources.description=Resource pack for §o§l§bThe§r §o§bBedrock Add-On§r
+pack.modules.behaviors.description=Behavior pack for §o§l§bThe§r §o§bBedrock Add-On§r
