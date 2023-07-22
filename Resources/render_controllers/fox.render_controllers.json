@@ -1,0 +1,37 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.fox": {
+			"geometry": "Array.body_variants[variable.habitat == 4]",
+			"textures": [ "Array.fur_variants[variable.habitat + variable.is_intelligent * 5]" ],
+			"materials": [ { "*": "Material.default" } ],
+			"part_visibility": [
+				{ "leg*": "!query.is_sleeping" },
+				{ "head": "!query.is_sleeping" },
+				{ "head_sleeping": "query.is_sleeping" }
+			],
+			"arrays": {
+				"textures": {
+					"Array.fur_variants": [
+						"Texture.red",
+						"Texture.arctic",
+						"Texture.silver",
+						"Texture.cross",
+						"Texture.fennec",
+						"Texture.red_intelligent",
+						"Texture.arctic_intelligent",
+						"Texture.silver_intelligent",
+						"Texture.cross_intelligent",
+						"Texture.fennec_intelligent"
+					]
+				},
+				"geometries": {
+					"Array.body_variants": [
+						"Geometry.default",
+						"Geometry.fennec"
+					]
+				}
+			}
+		}
+	}
+}
