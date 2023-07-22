@@ -42,7 +42,7 @@
 						"glow_berries"
 					],
 					"grow_up": {
-						"event": "bao:red_fox_ageable_grow_up",
+						"event": "bao:ageable_grow_up.red_fox",
 						"target": "self"
 					}
 				},
@@ -71,7 +71,7 @@
 						"mate_type": "minecraft:fox",
 						"baby_type": "minecraft:fox",
 						"breed_event": {
-							"event": "bao:born_red",
+							"event": "bao:entity_born.red_fox",
 							"target": "baby"
 						}
 					}
@@ -87,7 +87,7 @@
 						"glow_berries"
 					],
 					"grow_up": {
-						"event": "bao:arctic_fox_ageable_grow_up",
+						"event": "bao:ageable_grow_up.arctic_fox",
 						"target": "self"
 					}
 				},
@@ -116,7 +116,7 @@
 						"mate_type": "minecraft:fox",
 						"baby_type": "minecraft:fox",
 						"breed_event": {
-							"event": "bao:born_arctic",
+							"event": "bao:entity_born.arctic_fox",
 							"target": "baby"
 						}
 					}
@@ -132,7 +132,7 @@
 						"glow_berries"
 					],
 					"grow_up": {
-						"event": "bao:silver_fox_ageable_grow_up",
+						"event": "bao:ageable_grow_up.silver_fox",
 						"target": "self"
 					}
 				},
@@ -161,7 +161,7 @@
 						"mate_type": "minecraft:fox",
 						"baby_type": "minecraft:fox",
 						"breed_event": {
-							"event": "bao:born_silver",
+							"event": "bao:entity_born.silver_fox",
 							"target": "baby"
 						}
 					}
@@ -177,7 +177,7 @@
 						"glow_berries"
 					],
 					"grow_up": {
-						"event": "bao:cross_fox_ageable_grow_up",
+						"event": "bao:ageable_grow_up.cross_fox",
 						"target": "self"
 					}
 				},
@@ -206,7 +206,7 @@
 						"mate_type": "minecraft:fox",
 						"baby_type": "minecraft:fox",
 						"breed_event": {
-							"event": "bao:born_cross",
+							"event": "bao:entity_born.cross_fox",
 							"target": "baby"
 						}
 					}
@@ -222,7 +222,7 @@
 						"glow_berries"
 					],
 					"grow_up": {
-						"event": "bao:fennec_fox_ageable_grow_up",
+						"event": "bao:ageable_grow_up.fennec_fox",
 						"target": "self"
 					}
 				},
@@ -251,7 +251,7 @@
 						"mate_type": "minecraft:fox",
 						"baby_type": "minecraft:fox",
 						"breed_event": {
-							"event": "bao:born_fennec",
+							"event": "bao:entity_born.fennec_fox",
 							"target": "baby"
 						}
 					}
@@ -259,7 +259,7 @@
 			},
 
 			// Habitat Variations
-			"minecraft:fox_red": {
+			"minecraft:red_fox": {
 				"minecraft:behavior.nearest_prioritized_attackable_target": {
 					"priority": 6,
 					"attack_interval": 2,
@@ -333,7 +333,7 @@
 					]
 				}
 			},
-			"minecraft:fox_arctic": {
+			"minecraft:arctic_fox": {
 				"minecraft:behavior.nearest_prioritized_attackable_target": {
 					"priority": 6,
 					"attack_interval": 2,
@@ -407,7 +407,7 @@
 					]
 				}
 			},
-			"bao:fox_silver": {
+			"bao:silver_fox": {
 				"minecraft:behavior.nearest_prioritized_attackable_target": {
 					"priority": 6,
 					"attack_interval": 2,
@@ -481,7 +481,7 @@
 					]
 				}
 			},
-			"bao:fox_cross": {
+			"bao:cross_fox": {
 				"minecraft:behavior.nearest_prioritized_attackable_target": {
 					"priority": 6,
 					"attack_interval": 2,
@@ -555,7 +555,7 @@
 					]
 				}
 			},
-			"bao:fox_fennec": {
+			"bao:fennec_fox": {
 				"minecraft:behavior.nearest_prioritized_attackable_target": {
 					"priority": 6,
 					"attack_interval": 2,
@@ -1121,8 +1121,7 @@
 		"events": {
 			"minecraft:entity_spawned": {
 				"sequence": [
-					{ "trigger": "bao:habitat_determination" },
-					{ "trigger": "bao:age_randomization" }
+					{ "trigger": "bao:habitat_determination" }
 				]
 			},
 
@@ -1135,8 +1134,9 @@
 								{ "test": "has_biome_tag", "operator": "!=", "value": "cold" }
 							]
 						},
-						"add": { "component_groups": [ "minecraft:fox_arctic" ] },
-						"set_property": { "bao:habitat_variant": 1 }
+						"add": { "component_groups": [ "minecraft:arctic_fox" ] },
+						"set_property": { "bao:habitat_variant": 1 },
+						"trigger": { "event": "bao:age_randomization.arctic_fox" }
 					},
 					{
 						"filters": {
@@ -1145,8 +1145,9 @@
 								{ "test": "has_biome_tag", "operator": "==", "value": "cold" }
 							]
 						},
-						"add": { "component_groups": [ "bao:fox_silver" ] },
-						"set_property": { "bao:habitat_variant": 2 }
+						"add": { "component_groups": [ "bao:silver_fox" ] },
+						"set_property": { "bao:habitat_variant": 2 },
+						"trigger": { "event": "bao:age_randomization.silver_fox" }
 					},
 					{
 						"filters": {
@@ -1154,11 +1155,12 @@
 								{ "test": "bool_property", "domain": "bao:rare_variant", "value": false },
 								{ "test": "has_biome_tag", "operator": "!=", "value": "frozen" },
 								{ "test": "has_biome_tag", "operator": "!=", "value": "cold" },
-								{ "test": "has_biome_tag", "operator": "==", "value": "forest" }
+								{ "test": "has_biome_tag", "operator": "!=", "value": "desert" }
 							]
 						},
-						"add": { "component_groups": [ "minecraft:fox_red" ] },
-						"set_property": { "bao:habitat_variant": 0 }
+						"add": { "component_groups": [ "minecraft:red_fox" ] },
+						"set_property": { "bao:habitat_variant": 0 },
+						"trigger": { "event": "bao:age_randomization.red_fox" }
 					},
 					{
 						"filters": {
@@ -1166,11 +1168,12 @@
 								{ "test": "bool_property", "domain": "bao:rare_variant", "value": true },
 								{ "test": "has_biome_tag", "operator": "!=", "value": "frozen" },
 								{ "test": "has_biome_tag", "operator": "!=", "value": "cold" },
-								{ "test": "has_biome_tag", "operator": "==", "value": "forest" }
+								{ "test": "has_biome_tag", "operator": "!=", "value": "desert" }
 							]
 						},
-						"add": { "component_groups": [ "bao:fox_cross" ] },
-						"set_property": { "bao:habitat_variant": 3 }
+						"add": { "component_groups": [ "bao:cross_fox" ] },
+						"set_property": { "bao:habitat_variant": 3 },
+						"trigger": { "event": "bao:age_randomization.cross_fox" }
 					},
 					{
 						"filters": {
@@ -1178,97 +1181,167 @@
 								{ "test": "has_biome_tag", "operator": "==", "value": "desert" }
 							]
 						},
-						"add": { "component_groups": [ "bao:fox_fennec" ] },
-						"set_property": { "bao:habitat_variant": 4 }
+						"add": { "component_groups": [ "bao:fennec_fox" ] },
+						"set_property": { "bao:habitat_variant": 4 },
+						"trigger": { "event": "bao:age_randomization.fennec_fox" }
 					}
 				]
 			},
-			"bao:age_randomization": {
-				"sequence": [
+
+			// "bao:age_randomization": {
+			// 	"sequence": [
+			// 		{
+			// 			"filters": { "test": "int_property", "domain": "bao:habitat_variant", "subject": "self", "value": 0 },
+
+			// 		},
+			// 		{
+			// 			"filters": { "test": "int_property", "domain": "bao:habitat_variant", "subject": "self", "value": 1 },
+			// 			"randomize": [
+			// 				{
+			// 					"weight": 95,
+			// 					"add": {
+			// 						"component_groups": [ "bao:arctic_fox_adult", "minecraft:fox_with_item", "minecraft:docile_fox" ]
+			// 					}
+			// 				},
+			// 				{
+			// 					"weight": 5,
+			// 					"add": {
+			// 						"component_groups": [ "bao:arctic_fox_baby", "minecraft:docile_fox" ]
+			// 					}
+			// 				}
+			// 			]
+			// 		},
+			// 		{
+			// 			"filters": { "test": "int_property", "domain": "bao:habitat_variant", "subject": "self", "value": 2 },
+			// 			"randomize": [
+			// 				{
+			// 					"weight": 95,
+			// 					"add": {
+			// 						"component_groups": [ "bao:silver_fox_adult", "minecraft:fox_with_item", "minecraft:docile_fox" ]
+			// 					}
+			// 				},
+			// 				{
+			// 					"weight": 5,
+			// 					"add": {
+			// 						"component_groups": [ "bao:silver_fox_baby", "minecraft:docile_fox" ]
+			// 					}
+			// 				}
+			// 			]
+			// 		},
+			// 		{
+			// 			"filters": { "test": "int_property", "domain": "bao:habitat_variant", "subject": "self", "value": 3 },
+			// 			"randomize": [
+			// 				{
+			// 					"weight": 95,
+			// 					"add": {
+			// 						"component_groups": [ "bao:cross_fox_adult", "minecraft:fox_with_item", "minecraft:docile_fox" ]
+			// 					}
+			// 				},
+			// 				{
+			// 					"weight": 5,
+			// 					"add": {
+			// 						"component_groups": [ "bao:cross_fox_baby", "minecraft:docile_fox" ]
+			// 					}
+			// 				}
+			// 			]
+			// 		},
+			// 		{
+			// 			"filters": { "test": "int_property", "domain": "bao:habitat_variant", "subject": "self", "value": 4 },
+			// 			"randomize": [
+			// 				{
+			// 					"weight": 95,
+			// 					"add": {
+			// 						"component_groups": [ "bao:fennec_fox_adult", "minecraft:fox_with_item", "minecraft:docile_fox" ]
+			// 					}
+			// 				},
+			// 				{
+			// 					"weight": 5,
+			// 					"add": {
+			// 						"component_groups": [ "bao:fennec_fox_baby", "minecraft:docile_fox" ]
+			// 					}
+			// 				}
+			// 			]
+			// 		}
+			// 	]
+			// },
+
+			"bao:age_randomization.red_fox": {
+				"randomize": [
 					{
-						"filters": { "test": "int_property", "domain": "bao:habitat_variant", "subject": "self", "value": 0 },
-						"randomize": [
-							{
-								"weight": 95,
-								"add": {
-									"component_groups": [ "bao:red_fox_adult", "minecraft:fox_with_item", "minecraft:docile_fox" ]
-								}
-							},
-							{
-								"weight": 5,
-								"add": {
-									"component_groups": [ "bao:red_fox_baby", "minecraft:docile_fox" ]
-								}
-							}
-						]
+						"weight": 95,
+						"add": {
+							"component_groups": [ "bao:red_fox_adult", "minecraft:fox_with_item", "minecraft:docile_fox" ]
+						}
 					},
 					{
-						"filters": { "test": "int_property", "domain": "bao:habitat_variant", "subject": "self", "value": 1 },
-						"randomize": [
-							{
-								"weight": 95,
-								"add": {
-									"component_groups": [ "bao:arctic_fox_adult", "minecraft:fox_with_item", "minecraft:docile_fox" ]
-								}
-							},
-							{
-								"weight": 5,
-								"add": {
-									"component_groups": [ "bao:arctic_fox_baby", "minecraft:docile_fox" ]
-								}
-							}
-						]
+						"weight": 5,
+						"add": {
+							"component_groups": [ "bao:red_fox_baby", "minecraft:docile_fox" ]
+						}
+					}
+				]
+			},
+			"bao:age_randomization.arctic_fox": {
+				"randomize": [
+					{
+						"weight": 95,
+						"add": {
+							"component_groups": [ "bao:arctic_fox_adult", "minecraft:fox_with_item", "minecraft:docile_fox" ]
+						}
 					},
 					{
-						"filters": { "test": "int_property", "domain": "bao:habitat_variant", "subject": "self", "value": 2 },
-						"randomize": [
-							{
-								"weight": 95,
-								"add": {
-									"component_groups": [ "bao:silver_fox_adult", "minecraft:fox_with_item", "minecraft:docile_fox" ]
-								}
-							},
-							{
-								"weight": 5,
-								"add": {
-									"component_groups": [ "bao:silver_fox_baby", "minecraft:docile_fox" ]
-								}
-							}
-						]
+						"weight": 5,
+						"add": {
+							"component_groups": [ "bao:arctic_fox_baby", "minecraft:docile_fox" ]
+						}
+					}
+				]
+			},
+			"bao:age_randomization.silver_fox": {
+				"randomize": [
+					{
+						"weight": 95,
+						"add": {
+							"component_groups": [ "bao:silver_fox_adult", "minecraft:fox_with_item", "minecraft:docile_fox" ]
+						}
 					},
 					{
-						"filters": { "test": "int_property", "domain": "bao:habitat_variant", "subject": "self", "value": 3 },
-						"randomize": [
-							{
-								"weight": 95,
-								"add": {
-									"component_groups": [ "bao:cross_fox_adult", "minecraft:fox_with_item", "minecraft:docile_fox" ]
-								}
-							},
-							{
-								"weight": 5,
-								"add": {
-									"component_groups": [ "bao:cross_fox_baby", "minecraft:docile_fox" ]
-								}
-							}
-						]
+						"weight": 5,
+						"add": {
+							"component_groups": [ "bao:silver_fox_baby", "minecraft:docile_fox" ]
+						}
+					}
+				]
+			},
+			"bao:age_randomization.cross_fox": {
+				"randomize": [
+					{
+						"weight": 95,
+						"add": {
+							"component_groups": [ "bao:cross_fox_adult", "minecraft:fox_with_item", "minecraft:docile_fox" ]
+						}
 					},
 					{
-						"filters": { "test": "int_property", "domain": "bao:habitat_variant", "subject": "self", "value": 4 },
-						"randomize": [
-							{
-								"weight": 95,
-								"add": {
-									"component_groups": [ "bao:fennec_fox_adult", "minecraft:fox_with_item", "minecraft:docile_fox" ]
-								}
-							},
-							{
-								"weight": 5,
-								"add": {
-									"component_groups": [ "bao:fennec_fox_baby", "minecraft:docile_fox" ]
-								}
-							}
-						]
+						"weight": 5,
+						"add": {
+							"component_groups": [ "bao:cross_fox_baby", "minecraft:docile_fox" ]
+						}
+					}
+				]
+			},
+			"bao:age_randomization.fennec_fox": {
+				"randomize": [
+					{
+						"weight": 95,
+						"add": {
+							"component_groups": [ "bao:fennec_fox_adult", "minecraft:fox_with_item", "minecraft:docile_fox" ]
+						}
+					},
+					{
+						"weight": 5,
+						"add": {
+							"component_groups": [ "bao:fennec_fox_baby", "minecraft:docile_fox" ]
+						}
 					}
 				]
 			},
@@ -1277,41 +1350,41 @@
 				"set_property": { "bao:intelligent": true }
 			},
 
-			"bao:variant_override.red": {
-				"remove": { "component_groups": [ "minecraft:fox_arctic", "bao:fox_silver", "bao:fox_cross", "bao:fox_fennec" ] },
-				"add": { "component_groups": [ "minecraft:fox_red" ] },
+			"bao:variant_override.red_fox": {
+				"remove": { "component_groups": [ "minecraft:arctic_fox", "bao:silver_fox", "bao:cross_fox", "bao:fennec_fox" ] },
+				"add": { "component_groups": [ "minecraft:red_fox" ] },
 				"set_property": { "bao:habitat_variant": 0 }
 			},
-			"bao:variant_override.arctic": {
-				"remove": { "component_groups": [ "minecraft:fox_red", "bao:fox_silver", "bao:fox_cross", "bao:fox_fennec" ] },
-				"add": { "component_groups": [ "minecraft:fox_arctic" ] },
+			"bao:variant_override.arctic_fox": {
+				"remove": { "component_groups": [ "minecraft:red_fox", "bao:silver_fox", "bao:cross_fox", "bao:fennec_fox" ] },
+				"add": { "component_groups": [ "minecraft:arctic_fox" ] },
 				"set_property": { "bao:habitat_variant": 1 }
 			},
-			"bao:variant_override.silver": {
-				"remove": { "component_groups": [ "minecraft:fox_red", "minecraft:fox_arctic", "bao:fox_cross", "bao:fox_fennec" ] },
-				"add": { "component_groups": [ "bao:fox_silver" ] },
+			"bao:variant_override.silver_fox": {
+				"remove": { "component_groups": [ "minecraft:red_fox", "minecraft:arctic_fox", "bao:cross_fox", "bao:fennec_fox" ] },
+				"add": { "component_groups": [ "bao:silver_fox" ] },
 				"set_property": { "bao:habitat_variant": 2 }
 			},
-			"bao:variant_override.cross": {
-				"remove": { "component_groups": [ "minecraft:fox_red", "minecraft:fox_arctic", "bao:fox_silver", "bao:fox_fennec" ] },
-				"add": { "component_groups": [ "bao:fox_cross" ] },
+			"bao:variant_override.cross_fox": {
+				"remove": { "component_groups": [ "minecraft:red_fox", "minecraft:arctic_fox", "bao:silver_fox", "bao:fennec_fox" ] },
+				"add": { "component_groups": [ "bao:cross_fox" ] },
 				"set_property": { "bao:habitat_variant": 3 }
 			},
-			"bao:variant_override.fennec": {
-				"remove": { "component_groups": [ "minecraft:fox_red", "minecraft:fox_arctic", "bao:fox_silver", "bao:fox_cross" ] },
-				"add": { "component_groups": [ "bao:fox_fennec" ] },
+			"bao:variant_override.fennec_fox": {
+				"remove": { "component_groups": [ "minecraft:red_fox", "minecraft:arctic_fox", "bao:silver_fox", "bao:cross_fox" ] },
+				"add": { "component_groups": [ "bao:fennec_fox" ] },
 				"set_property": { "bao:habitat_variant": 4 }
 			},
 
 			// Lifetime Utilities
-			"bao:born_red": {
+			"bao:entity_born.red_fox": {
 				"sequence": [
 					{
 						"filters": { "test": "bool_property", "domain": "bao:rare_variant", "value": false },
 						"set_property": { "bao:habitat_variant": 0 },
 						"add": {
 							"component_groups": [
-								"minecraft:fox_red",
+								"minecraft:red_fox",
 								"bao:red_fox_baby",
 								"minecraft:trusting_fox",
 								"minecraft:docile_fox"
@@ -1323,7 +1396,7 @@
 						"set_property": { "bao:habitat_variant": 3 },
 						"add": {
 							"component_groups": [
-								"bao:fox_cross",
+								"bao:cross_fox",
 								"bao:cross_fox_baby",
 								"minecraft:trusting_fox",
 								"minecraft:docile_fox"
@@ -1332,14 +1405,14 @@
 					}
 				]
 			},
-			"bao:born_arctic": {
+			"bao:entity_born.arctic_fox": {
 				"sequence": [
 					{
 						"filters": { "test": "bool_property", "domain": "bao:rare_variant", "value": false },
 						"set_property": { "bao:habitat_variant": 1 },
 						"add": {
 							"component_groups": [
-								"minecraft:fox_arctic",
+								"minecraft:arctic_fox",
 								"bao:arctic_fox_baby",
 								"minecraft:trusting_fox",
 								"minecraft:docile_fox"
@@ -1351,7 +1424,7 @@
 						"set_property": { "bao:habitat_variant": 2 },
 						"add": {
 							"component_groups": [
-								"bao:fox_silver",
+								"bao:silver_fox",
 								"bao:silver_fox_baby",
 								"minecraft:trusting_fox",
 								"minecraft:docile_fox"
@@ -1360,14 +1433,14 @@
 					}
 				]
 			},
-			"bao:born_silver": {
+			"bao:entity_born.silver_fox": {
 				"sequence": [
 					{
 						"filters": { "test": "bool_property", "domain": "bao:rare_variant", "value": false },
 						"set_property": { "bao:habitat_variant": 2 },
 						"add": {
 							"component_groups": [
-								"bao:fox_silver",
+								"bao:silver_fox",
 								"bao:silver_fox_baby",
 								"minecraft:trusting_fox",
 								"minecraft:docile_fox"
@@ -1379,7 +1452,7 @@
 						"set_property": { "bao:habitat_variant": 3 },
 						"add": {
 							"component_groups": [
-								"bao:fox_cross",
+								"bao:cross_fox",
 								"bao:cross_fox_baby",
 								"minecraft:trusting_fox",
 								"minecraft:docile_fox"
@@ -1388,22 +1461,22 @@
 					}
 				]
 			},
-			"bao:born_cross": {
+			"bao:entity_born.cross_fox": {
 				"set_property": { "bao:habitat_variant": 3 },
 				"add": {
 					"component_groups": [
-						"bao:fox_cross",
+						"bao:cross_fox",
 						"bao:cross_fox_baby",
 						"minecraft:trusting_fox",
 						"minecraft:docile_fox"
 					]
 				}
 			},
-			"bao:born_fennec": {
+			"bao:entity_born.fennec_fox": {
 				"set_property": { "bao:habitat_variant": 4 },
 				"add": {
 					"component_groups": [
-						"bao:fox_fennec",
+						"bao:fennec_fox",
 						"bao:fennec_fox_baby",
 						"minecraft:trusting_fox",
 						"minecraft:docile_fox"
@@ -1411,23 +1484,23 @@
 				}
 			},
 
-			"bao:red_fox_ageable_grow_up": {
+			"bao:ageable_grow_up.red_fox": {
 				"remove": { "component_groups": [ "bao:red_fox_baby" ] },
 				"add": { "component_groups": [ "bao:red_fox_adult" ] }
 			},
-			"bao:arctic_fox_ageable_grow_up": {
+			"bao:ageable_grow_up.arctic_fox": {
 				"remove": { "component_groups": [ "bao:arctic_fox_baby" ] },
 				"add": { "component_groups": [ "bao:arctic_fox_adult" ] }
 			},
-			"bao:silver_fox_ageable_grow_up": {
+			"bao:ageable_grow_up.silver_fox": {
 				"remove": { "component_groups": [ "bao:silver_fox_baby" ] },
 				"add": { "component_groups": [ "bao:silver_fox_adult" ] }
 			},
-			"bao:cross_fox_ageable_grow_up": {
+			"bao:ageable_grow_up.cross_fox": {
 				"remove": { "component_groups": [ "bao:cross_fox_baby" ] },
 				"add": { "component_groups": [ "bao:cross_fox_adult" ] }
 			},
-			"bao:fennec_fox_ageable_grow_up": {
+			"bao:ageable_grow_up.fennec_fox": {
 				"remove": { "component_groups": [ "bao:fennec_fox_baby" ] },
 				"add": { "component_groups": [ "bao:fennec_fox_adult" ] }
 			},
