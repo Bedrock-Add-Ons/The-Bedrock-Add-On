@@ -4,3 +4,6 @@ pack.description=Resource definitions and assets supporting §o§l§bThe§r §o�
 
 ### Modules
 pack.modules.resources.description=Resource pack for §o§l§bThe§r §o§bBedrock Add-On§r
+
+## Added by DW623
+map.position=§6X:§r %s §aY:§r %s §eZ:§r %s
