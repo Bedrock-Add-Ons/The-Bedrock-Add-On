@@ -1,0 +1,383 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:spawn_rules": {
+    "description": {
+      "identifier": "minecraft:zombie",
+      "population_control": "monster"
+    },
+    "conditions": [
+      {
+        "minecraft:spawns_on_surface": {},
+        "minecraft:brightness_filter": {
+          "min": 0,
+          "max": 7,
+          "adjust_for_weather": true
+        },
+        "minecraft:difficulty_filter": {
+          "min": "easy",
+          "max": "hard"
+        },
+        "minecraft:weight": {
+          "default": 90
+        },
+        "minecraft:herd": {
+          "min_size": 3,
+          "max_size": 6,
+          "event": "bao:surface"
+        },
+        "minecraft:permute_type": [
+          {
+            "weight": 98
+          },
+          {
+            "weight": 2,
+            "entity_type": "minecraft:zombie_villager_v2"
+          }
+        ],
+        "minecraft:spawn_event": {
+          "event": "bao:surface"
+        },
+        "minecraft:biome_filter": {
+          "all_of": [
+            {
+              "test": "has_biome_tag",
+              "operator": "==",
+              "value": "monster"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "frozen"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "forest"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "jungle"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "swamp"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "mangrove_swamp"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "desert"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "mesa"
+            }
+          ]
+        }
+      },
+      {
+        "minecraft:spawns_on_surface": {},
+        "minecraft:brightness_filter": {
+          "min": 0,
+          "max": 7,
+          "adjust_for_weather": true
+        },
+        "minecraft:difficulty_filter": {
+          "min": "easy",
+          "max": "hard"
+        },
+        "minecraft:weight": {
+          "default": 90
+        },
+        "minecraft:herd": {
+          "min_size": 2,
+          "max_size": 5,
+          "event": "bao:forest"
+        },
+        "minecraft:permute_type": [
+          {
+            "weight": 98
+          },
+          {
+            "weight": 2,
+            "entity_type": "minecraft:zombie_villager_v2"
+          }
+        ],
+        "minecraft:spawn_event": {
+          "event": "bao:forest"
+        },
+        "minecraft:biome_filter": {
+          "all_of": [
+            {
+              "test": "has_biome_tag",
+              "operator": "==",
+              "value": "monster"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "frozen"
+            },
+            {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "operator": "==",
+                  "value": "forest"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "operator": "==",
+                  "value": "jungle"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "minecraft:spawns_on_surface": {},
+        "minecraft:brightness_filter": {
+          "min": 0,
+          "max": 7,
+          "adjust_for_weather": true
+        },
+        "minecraft:difficulty_filter": {
+          "min": "easy",
+          "max": "hard"
+        },
+        "minecraft:weight": {
+          "default": 10
+        },
+        "minecraft:herd": {
+          "min_size": 5,
+          "max_size": 8,
+          "event": "bao:surface"
+        },
+        "minecraft:permute_type": [
+          {
+            "weight": 70
+          },
+          {
+            "weight": 30,
+            "entity_type": "minecraft:zombie_villager_v2"
+          }
+        ],
+        "minecraft:spawn_event": {
+          "event": "bao:surface"
+        },
+        "minecraft:biome_filter": {
+          "all_of": [
+            {
+              "test": "has_biome_tag",
+              "operator": "==",
+              "value": "monster"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "frozen"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "forest"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "jungle"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "swamp"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "mangrove_swamp"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "desert"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "mesa"
+            }
+          ]
+        }
+      },
+      {
+        "minecraft:spawns_on_surface": {},
+        "minecraft:brightness_filter": {
+          "min": 0,
+          "max": 7,
+          "adjust_for_weather": true
+        },
+        "minecraft:difficulty_filter": {
+          "min": "easy",
+          "max": "hard"
+        },
+        "minecraft:weight": {
+          "default": 10
+        },
+        "minecraft:herd": {
+          "min_size": 4,
+          "max_size": 8,
+          "event": "bao:forest"
+        },
+        "minecraft:permute_type": [
+          {
+            "weight": 70
+          },
+          {
+            "weight": 30,
+            "entity_type": "minecraft:zombie_villager_v2"
+          }
+        ],
+        "minecraft:spawn_event": {
+          "event": "bao:forest"
+        },
+        "minecraft:biome_filter": {
+          "all_of": [
+            {
+              "test": "has_biome_tag",
+              "operator": "==",
+              "value": "monster"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "frozen"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "desert"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "mesa"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "swamp"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "mangrove_swamp"
+            },
+            {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "operator": "==",
+                  "value": "forest"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "operator": "==",
+                  "value": "jungle"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "minecraft:spawns_underground": {},
+        "minecraft:brightness_filter": {
+          "min": 0,
+          "max": 7
+        },
+        "minecraft:difficulty_filter": {
+          "min": "easy",
+          "max": "hard"
+        },
+        "minecraft:weight": {
+          "default": 100
+        },
+        "minecraft:herd": {
+          "min_size": 2,
+          "max_size": 6,
+          "event": "bao:cave"
+        },
+        "minecraft:spawn_event": {
+          "event": "bao:cave"
+        },
+        "minecraft:height_filter": {
+          "min": 1,
+          "max": 320
+        },
+        "minecraft:biome_filter": {
+          "all_of": [
+            {
+              "test": "has_biome_tag",
+              "operator": "==",
+              "value": "monster"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "dripstone_caves"
+            }
+          ]
+        }
+      },
+      {
+        "minecraft:spawns_underground": {},
+        "minecraft:brightness_filter": {
+          "min": 0,
+          "max": 7
+        },
+        "minecraft:difficulty_filter": {
+          "min": "easy",
+          "max": "hard"
+        },
+        "minecraft:weight": {
+          "default": 100
+        },
+        "minecraft:herd": {
+          "min_size": 3,
+          "max_size": 6,
+          "initial_event": "bao:deep_cave",
+          "initial_event_count": 2,
+          "event": "bao:cave",
+          "event_skip_count": 2
+        },
+        "minecraft:height_filter": {
+          "min": -64,
+          "max": 0
+        },
+        "minecraft:biome_filter": {
+          "all_of": [
+            {
+              "test": "has_biome_tag",
+              "operator": "==",
+              "value": "monster"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "dripstone_caves"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
