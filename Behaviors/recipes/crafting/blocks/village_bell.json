@@ -1,0 +1,24 @@
+{
+	"format_version": "1.20.10",
+	
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bao:bell"
+		},
+		
+		"tags": ["crafting_table"],
+		"unlock": ["minecraft:gold_block"],
+		
+		"pattern": [
+			"///",
+			" G ",
+			" * "
+		],
+		"key": {
+			"*": "minecraft:gold_nugget",
+			"/": "minecraft:stick",
+			"G": "minecraft:gold_block"
+		},
+		"result": "minecraft:bell"
+	}
+}
