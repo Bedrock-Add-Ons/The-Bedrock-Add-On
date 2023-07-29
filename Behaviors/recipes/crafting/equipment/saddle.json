@@ -1,0 +1,22 @@
+{
+	"format_version": "1.20.10",
+	
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bao:saddle"
+		},
+		
+		"tags": ["crafting_table"],
+		"unlock": ["minecraft:leather"],
+		
+		"pattern": [
+			"///",
+			"* *"
+		],
+		"key": {
+			"*": "minecraft:tripwire_hook",
+			"/": "minecraft:leather"
+		},
+		"result": "minecraft:saddle"
+	}
+}

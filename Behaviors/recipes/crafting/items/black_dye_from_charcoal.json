@@ -1,0 +1,16 @@
+{
+	"format_version": "1.20.10",
+	
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bao:black_dye_from_charcoal"
+		},
+
+		"tags": ["crafting_table"],
+		"unlock": ["minecraft:charcoal"],
+		"group": "black_dye",
+
+		"ingredients": ["minecraft:charcoal"],
+		"result": "minecraft:black_dye"
+	}
+}

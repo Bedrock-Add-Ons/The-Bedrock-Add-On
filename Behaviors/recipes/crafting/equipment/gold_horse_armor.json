@@ -1,0 +1,23 @@
+{
+	"format_version": "1.20.10",
+	
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bao:golden_horse_armor"
+		},
+		
+		"tags": ["crafting_table"],
+		"unlock": ["minecraft:gold_ingot"],
+		
+		"pattern": [
+			"#/#",
+			"###",
+			"# #"
+		],
+		"key": {
+			"#": "minecraft:gold_ingot",
+			"/": "minecraft:leather"
+		},
+		"result": "minecraft:golden_horse_armor"
+	}
+}
