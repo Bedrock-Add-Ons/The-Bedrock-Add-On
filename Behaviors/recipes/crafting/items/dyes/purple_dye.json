@@ -1,0 +1,24 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "bao:color_theory_purple_dye"
+        },
+
+        "tags": [ "crafting_table" ],
+        "group": "purple_dye",
+        
+        "ingredients": [
+            { "item": "minecraft:red_dye" },
+            { "item": "minecraft:blue_dye"}
+        ],
+        "unlock": [
+            { "item": "minecraft:red_dye" },
+            { "item": "minecraft:blue_dye"}
+        ],
+        "result": {
+            "item": "minecraft:purple_dye",
+            "count": 2
+        }
+    }
+}
