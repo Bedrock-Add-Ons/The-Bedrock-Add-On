@@ -1,0 +1,24 @@
+{
+	"format_version": "1.20.10",
+	
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "minecraft:snout_armor_trim_smithing_template_duplicate"
+		},
+		
+		"tags": ["crafting_table"],
+		"unlock": ["minecraft:snout_armor_trim_smithing_template"],
+		
+		"pattern": [
+			"C#C",
+			"#S#",
+			"C#C"
+		],
+		"key": {
+			"S": "minecraft:snout_armor_trim_smithing_template",
+			"#": "minecraft:diamond",
+			"C": "minecraft:blackstone"
+		},
+		"result": {"item": "minecraft:snout_armor_trim_smithing_template", "count": 2}
+	}
+}

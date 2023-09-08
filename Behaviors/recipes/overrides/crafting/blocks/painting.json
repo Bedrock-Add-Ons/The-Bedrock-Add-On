@@ -1,0 +1,28 @@
+{
+	"format_version": "1.20.10",
+	
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "minecraft:painting"
+		},
+		
+		"tags": ["crafting_table"],
+		"unlock": [
+			"minecraft:paper",
+			"minecraft:dye"
+		],
+		
+		"pattern": [
+			" S ",
+			"/P/",
+			" D "
+		],
+		"key": {
+			"/": "minecraft:stick",
+			"S": "minecraft:string",
+			"D": "minecraft:dye",
+			"P": "minecraft:paper"
+		},
+		"result": "painting"
+	}
+}

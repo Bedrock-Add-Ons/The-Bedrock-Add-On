@@ -1,0 +1,22 @@
+{
+	"format_version": "1.20.10",
+	
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "minecraft:leather_horse_armor"
+		},
+		
+		"tags": ["crafting_table"],
+		"unlock": ["minecraft:leather"],
+		
+		"pattern": [
+			"###",
+			"###",
+			"# #"
+		],
+		"key": {
+			"#": "minecraft:leather"
+		},
+		"result": "minecraft:leather_horse_armor"
+	}
+}

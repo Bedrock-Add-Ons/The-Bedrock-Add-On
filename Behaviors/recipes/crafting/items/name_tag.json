@@ -1,0 +1,22 @@
+{
+	"format_version": "1.20.10",
+	
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bao:name_tag"
+		},
+		
+		"tags": ["crafting_table"],
+		"unlock": ["minecraft:paper"],
+		
+		"pattern": [
+			"/",
+			"#"
+		],
+		"key": {
+			"/": "minecraft:string",
+			"#": "minecraft:paper"
+		},
+		"result": "minecraft:name_tag"
+	}
+}

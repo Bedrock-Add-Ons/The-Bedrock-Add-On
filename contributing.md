@@ -48,7 +48,7 @@ Extra care should always be taken in creating art assets to - as near as is comf
 - **Palettes**: Try to limit colours for any textured assets, drawing directly from Vanilla styling where applicable.
 - **Resolution**: Please remain within 16x pixel resolution.
 
-## Regarding JsonUI
+## Regarding JSON-UI
 Bedrock's User Interface system is not particularly intuative at the best of times, so cohenency and compatability are paramount. No short-cuts are to be taken as not to introduce any conflicts, potentially hindering others with their work. The following is the least that must be comformed to:
 
 - **Common Elements**: Not to be overwritten under any circumstances.
