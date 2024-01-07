@@ -19,7 +19,7 @@
           "max": "hard"
         },
         "minecraft:weight": {
-          "default": 5
+          "default": 1
         },
         "minecraft:biome_filter": {
           "test": "has_biome_tag", "operator": "==", "value": "monster"
@@ -37,7 +37,7 @@
           "max": "hard"
         },
         "minecraft:weight": {
-          "default": 50
+          "default": 10
         },
         "minecraft:biome_filter": {
           "test": "has_biome_tag", "operator": "==", "value": "swamp"
