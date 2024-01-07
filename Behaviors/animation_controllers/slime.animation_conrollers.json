@@ -1,0 +1,113 @@
+{
+    "format_version": "1.20.0",
+    "animation_controllers": {
+        "controller.animation.slime.attack.small": {
+            "initial_state": "contact",
+            "states": {
+                "contact": {
+                    "transitions": [
+                        {
+                            "impact": "!query.is_on_ground"
+                        },
+                        {
+                            "dead": "query.health <= 0"
+                        }
+                    ],
+                    "on_entry": [
+                        "@s bao:contact"
+                    ]
+                },
+                "impact": {
+                    "transitions": [
+                        {
+                            "contact": "query.is_on_ground"
+                        },
+                        {
+                            "dead": "query.health <= 0"
+                        }
+                    ],
+                    "on_entry": [
+                        "@s bao:small_attack"
+                    ]
+                },
+                "dead": {
+                    "on_entry": [
+                        "@s bao:death"
+                    ]
+                }
+            }
+        },
+        "controller.animation.slime.attack.medium": {
+            "initial_state": "contact",
+            "states": {
+                "contact": {
+                    "transitions": [
+                        {
+                            "impact": "!query.is_on_ground"
+                        },
+                        {
+                            "dead": "query.health <= 0"
+                        }
+                    ],
+                    "on_entry": [
+                        "@s bao:contact"
+                    ]
+                },
+                "impact": {
+                    "transitions": [
+                        {
+                            "contact": "query.is_on_ground"
+                        },
+                        {
+                            "dead": "query.health <= 0"
+                        }
+                    ],
+                    "on_entry": [
+                        "@s bao:medium_attack"
+                    ]
+                },
+                "dead": {
+                    "on_entry": [
+                        "@s bao:death"
+                    ]
+                }
+            }
+        },
+        "controller.animation.slime.attack.large": {
+            "initial_state": "contact",
+            "states": {
+                "contact": {
+                    "transitions": [
+                        {
+                            "impact": "!query.is_on_ground"
+                        },
+                        {
+                            "dead": "query.health <= 0"
+                        }
+                    ],
+                    "on_entry": [
+                        "@s bao:contact"
+                    ]
+                },
+                "impact": {
+                    "transitions": [
+                        {
+                            "contact": "query.is_on_ground"
+                        },
+                        {
+                            "dead": "query.health <= 0"
+                        }
+                    ],
+                    "on_entry": [
+                        "@s bao:large_attack"
+                    ]
+                },
+                "dead": {
+                    "on_entry": [
+                        "@s bao:death"
+                    ]
+                }
+            }
+        }
+    }
+}

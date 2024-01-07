@@ -1,0 +1,139 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:spawn_rules": {
+    "description": {
+      "identifier": "minecraft:magma_cube",
+      "population_control": "monster"
+    },
+    "conditions": [
+      {
+        "minecraft:spawns_underground": {},
+        "minecraft:spawns_on_block_filter": [
+          "minecraft:netherrack",
+          "minecraft:blackstone",
+          "minecraft:basalt"
+        ],
+        "minecraft:brightness_filter": {
+          "min": 0,
+          "max": 7
+        },
+        "minecraft:difficulty_filter": {
+          "min": "easy",
+          "max": "hard"
+        },
+        "minecraft:weight": {
+          "default": 10
+        },
+        "minecraft:height_filter": {
+          "min": 32,
+          "max": 96
+        },
+        "minecraft:herd": {
+          "min_size": 1,
+          "max_size": 2,
+          "initial_event": "bao:spawn_medium_or_small",
+          "initial_event_count": 1,
+          "event": "spawn_small",
+          "event_skip_count": 1
+        },
+        "minecraft:biome_filter": {
+          "test": "has_biome_tag",
+          "operator": "==",
+          "value": "spawn_magma_cubes"
+        }
+      },
+      {
+        "minecraft:spawns_underground": {},
+        "minecraft:spawns_on_block_filter": [
+          "minecraft:blackstone",
+          "minecraft:basalt"
+        ],
+        "minecraft:difficulty_filter": {
+          "min": "easy",
+          "max": "hard"
+        },
+        "minecraft:weight": {
+          "default": 40
+        },
+        "minecraft:height_filter": {
+          "min": 32,
+          "max": 96
+        },
+        "minecraft:herd": {
+          "min_size": 1,
+          "max_size": 3,
+          "initial_event": "bao:spawn_large_or_medium",
+          "initial_event_count": 1,
+          "event": "bao:spawn_medium_or_small",
+          "event_skip_count": 1
+        },
+        "minecraft:biome_filter": {
+          "test": "has_biome_tag",
+          "operator": "==",
+          "value": "spawn_many_magma_cubes"
+        }
+      },
+      {
+        "minecraft:spawns_underground": {},
+        "minecraft:spawns_on_block_filter": [
+          "minecraft:blackstone",
+          "minecraft:basalt"
+        ],
+        "minecraft:difficulty_filter": {
+          "min": "easy",
+          "max": "hard"
+        },
+        "minecraft:weight": {
+          "default": 60
+        },
+        "minecraft:height_filter": {
+          "min": 32,
+          "max": 96
+        },
+        "minecraft:herd": {
+          "min_size": 3,
+          "max_size": 5,
+          "initial_event": "bao:spawn_medium_or_small",
+          "initial_event_count": 1,
+          "event": "spawn_small",
+          "event_skip_count": 1
+        },
+        "minecraft:biome_filter": {
+          "test": "has_biome_tag",
+          "operator": "==",
+          "value": "spawn_many_magma_cubes"
+        }
+      },
+      {
+        "minecraft:spawns_underground": {},
+        "minecraft:spawns_on_block_filter": [
+          "minecraft:magma_block"
+        ],
+        "minecraft:brightness_filter": {
+          "min": 0,
+          "max": 11
+        },
+        "minecraft:difficulty_filter": {
+          "min": "easy",
+          "max": "hard"
+        },
+        "minecraft:weight": {
+          "default": 140
+        },
+        "minecraft:herd": {
+          "min_size": 2,
+          "max_size": 4,
+          "initial_event": "bao:spawn_medium_or_small",
+          "initial_event_count": 1,
+          "event": "spawn_small",
+          "event_skip_count": 1
+        },
+        "minecraft:biome_filter": {
+          "test": "has_biome_tag",
+          "operator": "==",
+          "value": "nether"
+        }
+      }
+    ]
+  }
+}
