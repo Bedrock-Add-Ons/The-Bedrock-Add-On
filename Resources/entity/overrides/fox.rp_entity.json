@@ -1,0 +1,70 @@
+{
+	"format_version": "1.20.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "minecraft:fox",
+			"geometry": {
+				"default": "geometry.fox",
+				"fennec": "geometry.fennec_fox"
+			},
+			"textures": {
+				// Skins
+				"red": "textures/entity/fox/fox",
+				"arctic": "textures/entity/fox/arctic_fox",
+				"silver": "textures/entity/fox/silver_fox",
+				"cross": "textures/entity/fox/cross_fox",
+				"fennec": "textures/entity/fox/fennec_fox",
+
+				// Eyes
+				"red_intelligent": "textures/entity/fox/fox_intelligent",
+				"arctic_intelligent": "textures/entity/fox/arctic_fox_intelligent",
+				"silver_intelligent": "textures/entity/fox/silver_fox_intelligent",
+				"cross_intelligent": "textures/entity/fox/cross_fox_intelligent",
+				"fennec_intelligent": "textures/entity/fox/fennec_fox_intelligent"
+			},
+			"materials": { "default": "fox" },
+			"render_controllers": [ "controller.render.fox" ],
+			//
+			"scripts": {
+				"initialize": [ "variable.is_intelligent = 0.0;", "variable.habitat = 0.0;" ],
+				"pre_animation": [
+					"variable.is_intelligent = query.property('bao:intelligent');",
+					"variable.habitat = query.property('bao:habitat_variant');"
+				],
+				"animate": [
+					{ "animation.baby_transform": "query.is_baby" },
+					"controller.idle_events", "controller.move",
+					"animation.setup"
+				]
+			},
+			"animations": {
+				// Controllers //
+				"controller.idle_events": "controller.animation.fox.idle_events",
+				"controller.move": "controller.animation.fox.move",
+
+				// Animations //
+				"animation.right_ear_wiggle": "animation.fox.right_ear_wiggle",
+				"animation.left_ear_wiggle": "animation.fox.left_ear_wiggle",
+				"animation.nose_wiggle": "animation.fox.nose_wiggle",
+
+				"animation.crouch": "animation.fox.crouch",
+				"animation.sleep": "animation.fox.sleep",
+				"animation.wiggle": "animation.fox.wiggle",
+				"animation.stuck": "animation.fox.stuck",
+				"animation.sit": "animation.fox.sit",
+				"animation.pounce": "animation.fox.pounce",
+
+				"animation.baby_transform": "animation.fox.baby_transform",
+				"animation.setup": "animation.fox.setup",
+
+				// Common //
+				"animation.look_at_target": "animation.common.look_at_target",
+				"animation.walk": "animation.quadruped.walk"
+			},
+			"spawn_egg": {
+				"texture": "spawn_egg",
+				"texture_index": 55
+			}
+		}
+	}
+}
