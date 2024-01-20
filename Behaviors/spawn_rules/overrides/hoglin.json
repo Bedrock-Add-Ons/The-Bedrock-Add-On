@@ -1,0 +1,66 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:spawn_rules": {
+    "description": {
+      "identifier": "minecraft:hoglin",
+      "population_control": "animal"
+    },
+    "conditions": [
+      {
+        "minecraft:spawns_underground": {},
+        "minecraft:spawns_on_block_filter": [
+          "minecraft:crimson_nylium"
+        ],
+        "minecraft:difficulty_filter": {
+          "min": "peaceful",
+          "max": "hard"
+        },
+        "minecraft:weight": {
+          "default": 20
+        },
+        "minecraft:herd": {
+          "min_size": 3,
+          "max_size": 5
+        },
+        "minecraft:height_filter": {
+          "min": 32,
+          "max": 96
+        },
+        "minecraft:biome_filter": {
+          "test": "has_biome_tag",
+          "operator": "==",
+          "value": "crimson_forest"
+        }
+      },
+      {
+        "minecraft:spawns_underground": {},
+        "minecraft:spawns_on_block_filter": [
+          "minecraft:crimson_nylium",
+          "minecraft:netherrack",
+          "minecraft:blackstone",
+          "minecraft:gravel"
+        ],
+        "minecraft:difficulty_filter": {
+          "min": "peaceful",
+          "max": "hard"
+        },
+        "minecraft:weight": {
+          "default": 5
+        },
+        "minecraft:herd": {
+          "min_size": 2,
+          "max_size": 2
+        },
+        "minecraft:height_filter": {
+          "min": 32,
+          "max": 96
+        },
+        "minecraft:biome_filter": {
+          "test": "has_biome_tag",
+          "operator": "==",
+          "value": "nether_wastes"
+        }
+      }
+    ]
+  }
+}

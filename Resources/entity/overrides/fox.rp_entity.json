@@ -1,0 +1,77 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "minecraft:fox",
+			"geometry": { "default": "geometry.bao.fox" },
+			"textures": {
+				// Skins
+				"red": "textures/entity/fox/fox",
+				"arctic": "textures/entity/fox/arctic_fox",
+				"silver": "textures/entity/fox/silver_fox",
+				"cross": "textures/entity/fox/cross_fox",
+				"fennec": "textures/entity/fox/fennec_fox",
+
+				// Eyes
+				"red_intelligent": "textures/entity/fox/fox_intelligent",
+				"arctic_intelligent": "textures/entity/fox/arctic_fox_intelligent",
+				"silver_intelligent": "textures/entity/fox/silver_fox_intelligent",
+				"cross_intelligent": "textures/entity/fox/cross_fox_intelligent",
+				"fennec_intelligent": "textures/entity/fox/fennec_fox_intelligent"
+			},
+			"materials": { "default": "fox" },
+			"render_controllers": [ "controller.render.fox" ],
+			"enable_attachables": true,
+			//
+			"scripts": {
+				"should_update_bones_and_effects_offscreen": true,
+				"initialize": [ "variable.is_intelligent = 0.0;", "variable.habitat = 0.0;", "variable.is_fennec = 0.0;", "variable.is_walking = 0.0;" ],
+				"pre_animation": [
+					"variable.debug = query.ground_speed;",
+
+					"variable.is_intelligent = query.property('bao:intelligent');",
+					"variable.habitat = query.property('bao:habitat_variant');",
+					"variable.is_fennec = variable.habitat == 4;",
+
+					"variable.is_walking = query.ground_speed > 0.175 && !query.is_sleeping && !query.is_sitting && !query.is_stunned && query.is_on_ground;"
+				],
+				"animate": [
+					"animation.setup",
+					"controller.idle_events", "controller.movement", "controller.root",
+					{ "animation.baby_transform": "query.is_baby" }
+				]
+			},
+			"animations": {
+				// Controllers //
+				"controller.idle_events": "controller.animation.bao.fox.idle_events",
+				"controller.movement": "controller.animation.bao.fox.movement",
+				"controller.root": "controller.animation.bao.fox.root",
+
+				// Animations //
+				"animation.right_ear_wiggle": "animation.fox.right_ear_wiggle",
+				"animation.left_ear_wiggle": "animation.fox.left_ear_wiggle",
+				"animation.nose_wiggle": "animation.fox.nose_wiggle",
+				"animation.idle": "animation.bao.fox.idle",
+
+				"animation.walk": "animation.bao.fox.walk",
+				"animation.crouch": "animation.fox.crouch",
+				"animation.sleep": "animation.fox.sleep",
+				"animation.wiggle": "animation.fox.wiggle",
+				"animation.stuck": "animation.fox.stuck",
+				"animation.sit": "animation.fox.sit",
+				"animation.pounce": "animation.fox.pounce",
+
+				"animation.baby_transform": "animation.fox.baby_transform",
+				"animation.setup": "animation.fox.setup",
+				"animation.itemScale": "animation.bao.fox.item_scale",
+
+				// Common //
+				"animation.look_at_target": "animation.common.look_at_target"
+			},
+			"spawn_egg": {
+				"texture": "spawn_egg",
+				"texture_index": 55
+			}
+		}
+	}
+}
