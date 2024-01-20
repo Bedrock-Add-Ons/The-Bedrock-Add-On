@@ -7,7 +7,7 @@
 		"uuid": "8F71431B-F785-43CC-9920-9C0AF7CDA130",
 		"version": "0.1.0",
 		
-		"min_engine_version": [1, 20, 10]
+		"min_engine_version": [1, 20, 50]
 	},
 	"metadata": {
 		"authors": [
@@ -23,10 +23,19 @@
 			"description": "pack.modules.behaviors.description",
 			"uuid": "0615395E-AB70-4EBD-A27B-4502F9E0947E",
 			"version": "0.1.0"
+		},
+		{
+			"uuid": "431612e4-f194-4893-9bfe-ceedd52a3599",
+			"version": [1, 0, 0],
+			"type": "script",
+			"language": "javascript",
+			"entry": "scripts/main.js"
 		}
 	],
 	
 	"dependencies": [
-		{"uuid": "7513B712-E228-4F0D-8403-D40D9F654944", "version": "0.1.0"}
+		{"uuid": "7513B712-E228-4F0D-8403-D40D9F654944", "version": "0.1.0"},
+		{ "module_name": "@minecraft/server","version": "1.8.0-beta" },
+		{"module_name": "@minecraft/server-ui","version": "1.2.0-beta"}
 	]
 }

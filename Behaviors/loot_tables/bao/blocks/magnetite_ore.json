@@ -1,0 +1,94 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "bao:raw_magnetite"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "bao:raw_magnetite",
+
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {"min": 0, "max": 1}
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "condition": "match_tool",
+                            "enchantments": [
+                                {
+                                    "enchantment": "fortune",
+                                    "levels": {"range_min": 1}
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "bao:raw_magnetite",
+
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {"min": 0, "max": 1}
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "condition": "match_tool",
+                            "enchantments": [
+                                {
+                                    "enchantment": "fortune",
+                                    "levels": {"range_min": 2}
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "bao:raw_magnetite",
+
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {"min": 0, "max": 1}
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "condition": "match_tool",
+                            "enchantments": [
+                                {
+                                    "enchantment": "fortune",
+                                    "levels": {"range_min": 3}
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

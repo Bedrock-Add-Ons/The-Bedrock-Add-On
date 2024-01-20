@@ -1,0 +1,10 @@
+{
+    "bao:raw_magnetite_block" : {
+        "sound" : "netherite",
+        "textures" : "bao:raw_magnetite_block"
+     },
+     "bao:magnetite_block" : {
+        "sound" : "netherite",
+        "textures" : "bao:magnetite_block"
+     }  
+}

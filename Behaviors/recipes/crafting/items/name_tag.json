@@ -10,12 +10,12 @@
 		"unlock": ["minecraft:paper"],
 		
 		"pattern": [
-			"/",
-			"#"
+			" /",
+			"# "
 		],
 		"key": {
-			"/": "minecraft:string",
-			"#": "minecraft:paper"
+			"#": "minecraft:paper",
+			"/": "minecraft:string"
 		},
 		"result": "minecraft:name_tag"
 	}

@@ -1,0 +1,9 @@
+{
+   "resource_pack_name" : "vanilla",
+   "texture_data" : {
+      "bao:ominous_spellbook":{
+         "textures":"textures/items/ominous_spellbook"
+      }
+   },
+   "texture_name" : "atlas.items"
+}
