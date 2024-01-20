@@ -1,6 +1,17 @@
 ## Pack
-pack.name=§o§l§bThe§r §o§bBedrock Add-On§r Behaviors
-pack.description=Behavior definitions and assets supporting §o§l§bThe§r §o§bBedrock Add-On§r
+pack.name=§o§l§bThe§r §o§bBedrock Add-On§r Resources
+pack.description=Resource definitions and assets supporting §o§l§bThe§r §o§bBedrock Add-On§r
 
 ### Modules
-pack.modules.behaviors.description=Behavior pack for §o§l§bThe§r §o§bBedrock Add-On§r
+pack.modules.resources.description=Resource pack for §o§l§bThe§r §o§bBedrock Add-On§r
+
+### Items
+item.bao:sawed_off_shotgun=Sawed Off Shotgun
+item.bao:raw_magnetite=Raw Magnetite
+item.bao:magnetite_ingot=Magnetite Ingot
+item.bao:magnetite_nugget=Magnetite Nugget
+item.bao:magnet=Magnet
+
+### blocks
+
+

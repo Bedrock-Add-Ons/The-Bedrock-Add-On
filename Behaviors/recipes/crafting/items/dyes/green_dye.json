@@ -1,0 +1,24 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "bao:color_theory_green_dye"
+        },
+
+        "tags": [ "crafting_table" ],
+        "group": "green_dye",
+        
+        "ingredients": [
+            { "item": "minecraft:yellow_dye" },
+            { "item": "minecraft:blue_dye"}
+        ],
+        "unlock": [
+            { "item": "minecraft:yellow_dye" },
+            { "item": "minecraft:blue_dye"}
+        ],
+        "result": {
+            "item": "minecraft:green_dye",
+            "count": 2
+        }
+    }
+}

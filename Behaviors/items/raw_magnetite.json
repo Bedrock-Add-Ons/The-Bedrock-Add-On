@@ -1,0 +1,11 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:item": {
+        "description": {
+            "identifier": "bao:raw_magnetite"
+        },
+        "components": {
+            "minecraft:icon": {"texture": "bao:raw_magnetite"}
+        }
+    }
+}

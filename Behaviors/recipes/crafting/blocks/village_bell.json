@@ -12,12 +12,12 @@
 		"pattern": [
 			"///",
 			" G ",
-			" * "
+			"G*G"
 		],
 		"key": {
 			"*": "minecraft:gold_nugget",
 			"/": "minecraft:stick",
-			"G": "minecraft:gold_block"
+			"G": "minecraft:gold_ingot"
 		},
 		"result": "minecraft:bell"
 	}

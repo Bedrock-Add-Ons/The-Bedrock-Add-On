@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../../MCBESwitcher+/Profiles/SumiYumi/development_behavior_packs/Pandemonium [Data]"
+		},
+		{
+			"path": "../../../../../../MCBESwitcher+/Profiles/SumiYumi/development_resource_packs/Pandemonium [Assets]"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../Documentation/Versions/Bedrock/Bedrock Sample Repository"
+		}
+	],
+	"settings": { }
+}

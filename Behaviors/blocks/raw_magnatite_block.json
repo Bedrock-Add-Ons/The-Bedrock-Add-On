@@ -1,0 +1,14 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:block": {
+        "description": {
+            "identifier": "bao:raw_magnetite_block",
+            "menu_category": { "category": "construction", "group":"itemGroup.name.oreBlocks" }
+        },
+        "components": {
+            "minecraft:destructible_by_explosion": { "explosion_resistance": 30 },
+            "minecraft:destructible_by_mining": { "seconds_to_destroy": 1 },
+            "minecraft:map_color":[ 200, 200, 200 ]
+        }
+    }
+}
