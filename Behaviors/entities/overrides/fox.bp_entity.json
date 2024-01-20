@@ -856,7 +856,7 @@
 				"max_look_count": 5,
 				"min_look_time": 80,
 				"max_look_time": 100,
-				"probability": 0.001
+				"probability": 0.0
 			},
 			"minecraft:behavior.raid_garden": {
 				"priority": 12,
@@ -913,11 +913,7 @@
 				"triggers": [
 					{
 						"on_damage": {
-							"filters": {
-								"test": "is_block",
-								"subject": "block",
-								"value": "minecraft:sweet_berry_bush"
-							}
+							"filters": { "test": "is_block", "subject": "block", "value": "minecraft:sweet_berry_bush" }
 						},
 						"deals_damage": false
 					}
@@ -1006,83 +1002,6 @@
 					}
 				]
 			},
-
-			// "bao:age_randomization": {
-			// 	"sequence": [
-			// 		{
-			// 			"filters": { "test": "int_property", "domain": "bao:habitat_variant", "subject": "self", "value": 0 },
-
-			// 		},
-			// 		{
-			// 			"filters": { "test": "int_property", "domain": "bao:habitat_variant", "subject": "self", "value": 1 },
-			// 			"randomize": [
-			// 				{
-			// 					"weight": 95,
-			// 					"add": {
-			// 						"component_groups": [ "bao:arctic_fox_adult", "minecraft:fox_with_item", "minecraft:docile_fox" ]
-			// 					}
-			// 				},
-			// 				{
-			// 					"weight": 5,
-			// 					"add": {
-			// 						"component_groups": [ "bao:arctic_fox_baby", "minecraft:docile_fox" ]
-			// 					}
-			// 				}
-			// 			]
-			// 		},
-			// 		{
-			// 			"filters": { "test": "int_property", "domain": "bao:habitat_variant", "subject": "self", "value": 2 },
-			// 			"randomize": [
-			// 				{
-			// 					"weight": 95,
-			// 					"add": {
-			// 						"component_groups": [ "bao:silver_fox_adult", "minecraft:fox_with_item", "minecraft:docile_fox" ]
-			// 					}
-			// 				},
-			// 				{
-			// 					"weight": 5,
-			// 					"add": {
-			// 						"component_groups": [ "bao:silver_fox_baby", "minecraft:docile_fox" ]
-			// 					}
-			// 				}
-			// 			]
-			// 		},
-			// 		{
-			// 			"filters": { "test": "int_property", "domain": "bao:habitat_variant", "subject": "self", "value": 3 },
-			// 			"randomize": [
-			// 				{
-			// 					"weight": 95,
-			// 					"add": {
-			// 						"component_groups": [ "bao:cross_fox_adult", "minecraft:fox_with_item", "minecraft:docile_fox" ]
-			// 					}
-			// 				},
-			// 				{
-			// 					"weight": 5,
-			// 					"add": {
-			// 						"component_groups": [ "bao:cross_fox_baby", "minecraft:docile_fox" ]
-			// 					}
-			// 				}
-			// 			]
-			// 		},
-			// 		{
-			// 			"filters": { "test": "int_property", "domain": "bao:habitat_variant", "subject": "self", "value": 4 },
-			// 			"randomize": [
-			// 				{
-			// 					"weight": 95,
-			// 					"add": {
-			// 						"component_groups": [ "bao:fennec_fox_adult", "minecraft:fox_with_item", "minecraft:docile_fox" ]
-			// 					}
-			// 				},
-			// 				{
-			// 					"weight": 5,
-			// 					"add": {
-			// 						"component_groups": [ "bao:fennec_fox_baby", "minecraft:docile_fox" ]
-			// 					}
-			// 				}
-			// 			]
-			// 		}
-			// 	]
-			// },
 
 			"bao:age_randomization.red_fox": {
 				"randomize": [

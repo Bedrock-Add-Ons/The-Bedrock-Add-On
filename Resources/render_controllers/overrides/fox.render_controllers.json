@@ -2,13 +2,29 @@
 	"format_version": "1.8.0",
 	"render_controllers": {
 		"controller.render.fox": {
-			"geometry": "Array.body_variants[variable.habitat == 4]",
+			"geometry": "Geometry.default",
 			"textures": [ "Array.fur_variants[variable.habitat + variable.is_intelligent * 5]" ],
 			"materials": [ { "*": "Material.default" } ],
 			"part_visibility": [
-				{ "leg*": "!query.is_sleeping" },
-				{ "head": "!query.is_sleeping" },
-				{ "head_sleeping": "query.is_sleeping" }
+				{ "defaultHead": "!query.is_sleeping && !variable.is_fennec" },
+				{ "defaultHeadSleeping": "query.is_sleeping && !variable.is_fennec" },
+				{ "defaultMuzzle": "!variable.is_fennec" },
+				{ "defaultLeftEar": "!variable.is_fennec" }, { "defaultRightEar": "!variable.is_fennec" },
+
+				{ "defaultBodyMain": "!variable.is_fennec" },
+				{ "defaultTail": "!variable.is_fennec" },
+				{ "defaultLeg*": "!query.is_sleeping && !variable.is_fennec" },
+
+				// Fennec
+
+				{ "fennecHead": "!query.is_sleeping && variable.is_fennec" },
+				{ "fennecHeadSleeping": "query.is_sleeping && variable.is_fennec" },
+				{ "fennecMuzzle": "variable.is_fennec" },
+				{ "fennecLeftEar": "variable.is_fennec" }, { "fennecRightEar": "variable.is_fennec" },
+
+				{ "fennecBodyMain": "variable.is_fennec" },
+				{ "fennecTail": "variable.is_fennec" },
+				{ "fennecLeg*": "!query.is_sleeping && variable.is_fennec" }
 			],
 			"arrays": {
 				"textures": {
@@ -23,12 +39,6 @@
 						"Texture.silver_intelligent",
 						"Texture.cross_intelligent",
 						"Texture.fennec_intelligent"
-					]
-				},
-				"geometries": {
-					"Array.body_variants": [
-						"Geometry.default",
-						"Geometry.fennec"
 					]
 				}
 			}

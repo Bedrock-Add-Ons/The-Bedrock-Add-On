@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "."
+		},
+		{
+			"path": "../../../Documentation/Versions/Bedrock/Bedrock Sample Repository"
 		}
 	],
 	"settings": { }

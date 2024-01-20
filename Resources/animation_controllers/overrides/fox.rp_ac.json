@@ -1,25 +1,35 @@
 {
-	"format_version": "1.10.0",
+	"format_version": "1.20.50",
 	"animation_controllers": {
-		"controller.animation.fox.move": {
+		"controller.animation.bao.fox.root": {
 			"initial_state": "default",
 			"states": {
 				"default": {
-					"animations": [
-						{ "animation.walk": "query.modified_move_speed" },
-						"animation.look_at_target"
-					],
-					"blend_transition": 0.1,
+					"animations": [ "animation.look_at_target" ],
+					"blend_transition": 0.125,
 					"transitions": [
 						{ "crouch": "query.is_stalking" },
-						{ "sleep": "query.is_sleeping" },
+						{ "sleep": "query.is_sleeping && query.ground_speed == 0.0" },
 						{ "stuck": "query.is_stunned" },
-						{ "sit": "query.is_sitting" }
+						{ "sit": "query.is_sitting && query.ground_speed == 0.0" }
+					]
+				},
+
+				// Action States //
+				"wiggle": {
+					"animations": [
+						"animation.look_at_target",
+						"animation.wiggle"
+					],
+					"blend_transition": 0.25,
+					"transitions": [
+						{ "default": "!query.has_target && query.is_on_ground" },
+						{ "crouch": "query.is_on_ground && !query.is_interested && query.is_stalking" },
+						{ "pounce": "!query.is_on_ground" }
 					]
 				},
 				"crouch": {
 					"animations": [
-						{ "animation.walk": "query.modified_move_speed" },
 						"animation.look_at_target",
 						"animation.crouch"
 					],
@@ -29,72 +39,147 @@
 						{ "wiggle": "query.is_interested" }
 					]
 				},
+
+				// Static States //
 				"pounce": {
 					"animations": [
-						{ "animation.walk": "query.modified_move_speed" },
 						"animation.look_at_target",
 						"animation.pounce"
 					],
 					"blend_transition": 2.0,
-					"transitions": [
-						{ "default": "query.is_on_ground" }
-					]
+					"transitions": [ { "default": "query.is_on_ground" } ]
 				},
 				"sit": {
 					"animations": [ "animation.sit" ],
-					"blend_transition": 0.2,
-					"transitions": [
-						{ "default": "!query.is_sitting" }
-					]
+					"blend_transition": 0.25,
+					"transitions": [ { "default": "!query.is_sitting || query.ground_speed > 0.0" } ]
 				},
 				"sleep": {
 					"animations": [ "animation.sleep" ],
-					"blend_transition": 0.2,
-					"transitions": [
-						{ "default": "!query.is_sleeping" }
-					]
+					"blend_transition": 0.25,
+					"transitions": [ { "default": "!query.is_sleeping || variable.is_walking" } ]
 				},
 				"stuck": {
 					"animations": [
 						{ "animation.walk": "math.cos(query.life_time * 20.0 * 53.7)" },
 						"animation.stuck"
 					],
-					"blend_transition": 0.2,
+					"blend_transition": 0.25,
+					"transitions": [ { "default": "!query.is_stunned" } ]
+				}
+			}
+		},
+		"controller.animation.bao.fox.movement": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"blend_transition": 0.25,
 					"transitions": [
-						{ "default": "!query.is_stunned" }
+						{ "walking": "variable.is_walking" }
 					]
 				},
-				"wiggle": {
-					"animations": [
-						{ "animation.walk": "query.modified_move_speed" },
-						"animation.look_at_target",
-						"animation.wiggle"
-					],
-					"blend_transition": 0.2,
+
+				// Action States //
+				"walking": {
+					"animations": [ "animation.walk" ],
+					"blend_via_shortest_path": true,
+					"blend_transition": 0.33,
 					"transitions": [
-						{ "default": "!query.has_target && query.is_on_ground" },
-						{ "crouch": "query.is_on_ground && !query.is_interested && query.is_stalking" },
-						{ "pounce": "!query.is_on_ground" }
+						{ "default": "query.ground_speed < 0.175" }
 					]
 				}
 			}
 		},
-		"controller.animation.fox.idle_events": {
+		"controller.animation.bao.fox.idle_events": {
 			"states": {
 				"default": {
 					"blend_transition": 0.125,
 					"transitions": [
-						{ "idle": "!query.is_sleeping && query.ground_speed == 0.0" }
+						{ "idle": "query.ground_speed == 0.0" }
 					]
 				},
 				"idle": {
-					"animations": [ "animation.left_ear_wiggle", "animation.right_ear_wiggle", "animation.nose_wiggle" ],
+					"animations": [ "animation.left_ear_wiggle", "animation.idle", "animation.right_ear_wiggle", "animation.nose_wiggle" ],
 					"blend_transition": 0.125,
 					"transitions": [
-						{ "default": "query.is_sleeping || query.ground_speed > 0.125" }
+						{ "default": "query.ground_speed > 0.125" }
 					]
 				}
 			}
 		}
+		// "controller.animation.bao.fox.move": {
+		// 	"initial_state": "default",
+		// 	"states": {
+		// 		"default": {
+		// 			"animations": [
+		// 				{ "animation.walk": "query.modified_move_speed" },
+		// 				"animation.look_at_target"
+		// 			],
+		// 			"blend_transition": 0.125,
+		// 			"transitions": [
+		// 				{ "crouch": "query.is_stalking" },
+		// 				{ "sleep": "query.is_sleeping" },
+		// 				{ "stuck": "query.is_stunned" },
+		// 				{ "sit": "query.is_sitting" }
+		// 			]
+		// 		},
+
+		// 		// Action States //
+		// 		"wiggle": {
+		// 			"animations": [
+		// 				{ "animation.walk": "query.modified_move_speed" },
+		// 				"animation.look_at_target",
+		// 				"animation.wiggle"
+		// 			],
+		// 			"blend_transition": 0.25,
+		// 			"transitions": [
+		// 				{ "default": "!query.has_target && query.is_on_ground" },
+		// 				{ "crouch": "query.is_on_ground && !query.is_interested && query.is_stalking" },
+		// 				{ "pounce": "!query.is_on_ground" }
+		// 			]
+		// 		},
+		// 		"crouch": {
+		// 			"animations": [
+		// 				{ "animation.walk": "query.modified_move_speed" },
+		// 				"animation.look_at_target",
+		// 				"animation.crouch"
+		// 			],
+		// 			"blend_transition": 0.4,
+		// 			"transitions": [
+		// 				{ "default": "!query.is_stalking && !query.is_interested" },
+		// 				{ "wiggle": "query.is_interested" }
+		// 			]
+		// 		},
+
+		// 		// Static States //
+		// 		"pounce": {
+		// 			"animations": [
+		// 				{ "animation.walk": "query.modified_move_speed" },
+		// 				"animation.look_at_target",
+		// 				"animation.pounce"
+		// 			],
+		// 			"blend_transition": 2.0,
+		// 			"transitions": [ { "default": "query.is_on_ground" } ]
+		// 		},
+		// 		"sit": {
+		// 			"animations": [ "animation.sit" ],
+		// 			"blend_transition": 0.25,
+		// 			"transitions": [ { "default": "!query.is_sitting" } ]
+		// 		},
+		// 		"sleep": {
+		// 			"animations": [ "animation.sleep" ],
+		// 			"blend_transition": 0.25,
+		// 			"transitions": [ { "default": "!query.is_sleeping" } ]
+		// 		},
+		// 		"stuck": {
+		// 			"animations": [
+		// 				{ "animation.walk": "math.cos(query.life_time * 20.0 * 53.7)" },
+		// 				"animation.stuck"
+		// 			],
+		// 			"blend_transition": 0.25,
+		// 			"transitions": [ { "default": "!query.is_stunned" } ]
+		// 		}
+		// 	}
+		// }
 	}
 }
