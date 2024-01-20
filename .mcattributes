@@ -1,0 +1,7 @@
+diagnostic.disable.minecraft.format_version=true
+diagnostic.disable.minecraft.format_version=true
+diagnostic.disable.minecraft.manifest.version.invalid=true
+diagnostic.disable.minecraft.manifest.version.minimum=true
+diagnostic.disable.molang.query.deprecated=true
+diagnostic.disable.minecraft.animation_controller.animation.undefined=true
+diagnostic.disable.molang.variable.missing=true

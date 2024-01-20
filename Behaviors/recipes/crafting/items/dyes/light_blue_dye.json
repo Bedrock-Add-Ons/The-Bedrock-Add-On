@@ -17,7 +17,7 @@
             { "item": "minecraft:white_dye" }
         ],
         "result": {
-            "item": "minecraft:light_blue",
+            "item": "minecraft:light_blue_dye",
             "count": 2
         }
     }

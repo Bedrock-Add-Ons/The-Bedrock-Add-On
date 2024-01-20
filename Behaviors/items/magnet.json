@@ -1,0 +1,11 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:item": {
+        "description": {
+            "identifier": "bao:magnet"
+        },
+        "components": {
+            "minecraft:icon": {"texture": "bao:magnet"}
+        }
+    }
+}

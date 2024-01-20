@@ -1,0 +1,22 @@
+{
+	"format_version": "1.20.10",
+	
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bao:chainmail_chestplate"
+		},
+		
+		"tags": ["crafting_table"],
+		"unlock": ["minecraft:chain"],
+		
+		"pattern": [
+			"# #",
+			"###",
+			"###"
+		],
+		"key": {
+			"#": "minecraft:chain"
+		},
+		"result": "minecraft:chainmail_chestplate"
+	}
+}

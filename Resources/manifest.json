@@ -7,7 +7,7 @@
 		"uuid": "7513B712-E228-4F0D-8403-D40D9F654944",
 		"version": "0.1.0",
 		
-		"min_engine_version": [1, 20, 10]
+		"min_engine_version": [1, 20, 50]
 	},
 	"metadata": {
 		"authors": [
