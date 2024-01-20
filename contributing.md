@@ -43,4 +43,4 @@ Extra care should always be taken in creating art assets to - as near as is comf
 
 - **Voxels**: Please mind the count of elements for custom models, applying Vanilla proportions and simplification.
 - **Palettes**: Try to limit colours for any textured assets, drawing directly from Vanilla styling where applicable.
-- **Resolution**: Please remain within 16x pixel resolution.
+- **Resolution**: Please remain within 16x16 pixel resolution.
