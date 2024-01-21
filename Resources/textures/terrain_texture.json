@@ -1,7 +1,9 @@
 {
-   "num_mip_levels" : 4,
-   "padding" : 8,
-   "resource_pack_name" : "vanilla",
-   "texture_data" : {},
-   "texture_name" : "atlas.terrain"
+   "resource_pack_name": "the-bedrock-add-on",
+   "texture_data": {
+      "bao:raw_magnetite_block": { "textures": "textures/blocks/raw_magnetite_block" },
+      "bao:magnetite_block": { "textures": "textures/blocks/magnetite_block" },
+      "bao:magnetite_ore": { "textures": "textures/blocks/raw_magnetite_ore" }
+   },
+   "texture_name": "atlas.terrain"
 }

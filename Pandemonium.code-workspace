@@ -7,10 +7,10 @@
 			"path": "../../../../../../MCBESwitcher+/Profiles/SumiYumi/development_resource_packs/Pandemonium [Assets]"
 		},
 		{
-			"path": "."
+			"path": "../../../Documentation/Versions/Bedrock/Bedrock Sample Repository"
 		},
 		{
-			"path": "../../../Documentation/Versions/Bedrock/Bedrock Sample Repository"
+			"path": "."
 		}
 	],
 	"settings": { }

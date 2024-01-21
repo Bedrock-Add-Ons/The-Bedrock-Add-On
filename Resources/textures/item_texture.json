@@ -1,9 +1,8 @@
 {
-   "resource_pack_name" : "vanilla",
-   "texture_data" : {
-      "bao:ominous_spellbook":{
-         "textures":"textures/items/ominous_spellbook"
-      }
+   "resource_pack_name": "the-bedrock-add-on",
+   "texture_data": {
+      "bao:raw_magnetite": { "textures": "textures/items/raw_magnetite" },
+      "bao:magnetite_ingot": { "textures": "textures/items/magnetite_ingot" }
    },
-   "texture_name" : "atlas.items"
+   "texture_name": "atlas.items"
 }

@@ -5,7 +5,7 @@
       "identifier": "bao:furnace_magnetite_ingot"
     },
 
-    "tags": ["furnace", "blast_furnace"],
+    "tags": [ "furnace", "blast_furnace" ],
     "input": "bao:raw_magnetite",
     "output": "bao:magnetite_ingot"
   }
