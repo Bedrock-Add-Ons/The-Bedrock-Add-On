@@ -1,9 +1,46 @@
 {
-   "resource_pack_name" : "vanilla",
-   "texture_data" : {
-      "bao:ominous_spellbook":{
-         "textures":"textures/items/ominous_spellbook"
-      }
-   },
-   "texture_name" : "atlas.items"
+	"resource_pack_name": "vanilla",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		// ----------------- //
+		// ----- Gear ------ //
+		// ----------------- //
+
+		// Soul Steel
+		"soul_steel.nugget": { "textures": "textures/items/soul_steel/nugget" },
+        "soul_steel.ingot": { "textures": "textures/items/soul_steel/ingot" },
+
+		"soul_steel.pickaxe": { "textures": "textures/items/soul_steel/pickaxe" },
+		"soul_steel.shovel": { "textures": "textures/items/soul_steel/shovel" },
+		"soul_steel.axe": { "textures": "textures/items/soul_steel/axe" },
+		"soul_steel.hoe": { "textures": "textures/items/soul_steel/hoe" },
+		"soul_steel.sword": { "textures": "textures/items/soul_steel/sword" },
+		"soul_steel.scythe": { "textures": "textures/items/soul_steel/scythe" },
+
+		"soul_steel.helmet": { "textures": "textures/items/soul_steel/helmet" },
+		"soul_steel.chestplate": { "textures": "textures/items/soul_steel/chestplate" },
+		"soul_steel.leggings": { "textures": "textures/items/soul_steel/leggings" },
+		"soul_steel.boots": { "textures": "textures/items/soul_steel/boots" },
+
+		//
+
+		// ----------------- //
+		// ---- Utility ---- //
+		// ----------------- //
+
+		"moss_clump": { "textures": "textures/items/moss_clump" }
+
+		// ----------------- //
+		// --- Cosmetic ---- //
+		// ----------------- //
+
+		
+		// ----------------- //
+		// ----- Food ------ //
+		// ----------------- //
+
+		// ----------------- //
+		// ----- Misc ------ //
+		// ----------------- //
+    }
 }

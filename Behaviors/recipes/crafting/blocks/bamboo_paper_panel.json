@@ -1,0 +1,25 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bao:bamboo_paper_panel"
+		},
+		
+		"tags": ["crafting_table"],
+		"unlock": ["minecraft:bamboo"],
+		
+		"pattern": [
+			" # ",
+			"#~#",
+			" # "
+		],
+		"key": {
+			"#": "minecraft:bamboo",
+			"~": "minecraft:paper"
+		},
+		"result": {
+			"item": "bao:bamboo_paper_panel",
+			"count": 1
+		}
+	}
+}

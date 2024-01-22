@@ -17,3 +17,23 @@ item.bao:magnet=Magnet
 tile.bao:magnetite_ore.name=Magnetite Ore
 tile.bao:magnetite_block.name=Magnetite Block
 tile.bao:raw_magnetite_block.name=Raw Magnetite Block
+
+tile.bao:polished_glowstone.name=Polished Glowstone
+tile.bao:polished_glowstone_bricks.name=Polished Glowstone Bricks
+tile.bao:polished_glowstone_pillar.name=Polished Glowstone Pillar
+tile.bao:chiseled_polished_glowstone.name=Chiseled Polished Glowstone
+tile.bao:shimmer_glass.name=Shimmer Glass
+tile.bao:shimmer_glass_pane.name=Shimmer Glass Pane
+
+tile.bao:framed_glass.name=Framed Glass
+tile.bao:framed_glass_pane.name=Framed Glass Pane
+tile.bao:ornate_framed_glass.name=Ornate Framed Glass
+tile.bao:ornate_framed_glass_pane.name=Ornate Framed Glass Pane
+tile.bao:rounded_framed_glass.name=Rounded Framed Glass
+tile.bao:rounded_framed_glass_pane.name=Rounded Framed Glass Pane
+tile.bao:small_framed_glass.name=Small Framed Glass
+tile.bao:small_framed_glass_pane.name=Small Framed Glass Pane
+
+tile.bao:tinted_glass_pane.name=Tinted Glass Pane
+
+tile.bao:bamboo_paper_panel.name=Bamboo Paper Panel

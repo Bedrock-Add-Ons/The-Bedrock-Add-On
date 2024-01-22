@@ -1,0 +1,24 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "bao:shimmer_glass_pane_stonecutting"
+    },
+    "tags": [ "stonecutter" ],
+    "priority": 2,
+    "ingredients": [
+      {
+        "item": "bao:shimmer_glass"
+      }
+    ],
+    "unlock": [
+      {
+        "item": "bao:shimmer_glass"
+      }
+    ],
+    "result": {
+      "item": "bao:shimmer_glass_pane",
+      "count": 3
+    }
+  }
+}

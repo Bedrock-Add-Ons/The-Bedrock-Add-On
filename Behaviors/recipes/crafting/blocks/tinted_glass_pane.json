@@ -1,0 +1,23 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bao:tinted_glass_pane"
+		},
+		
+		"tags": ["crafting_table"],
+		"unlock": ["minecraft:tinted_glass"],
+		
+		"pattern": [
+			"###",
+			"###"
+		],
+		"key": {
+			"#": "minecraft:tinted_glass"
+		},
+		"result": {
+			"item": "bao:tinted_glass_pane",
+			"count": 16
+		}
+	}
+}

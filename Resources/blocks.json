@@ -1,10 +1,71 @@
 {
-    "bao:raw_magnetite_block" : {
-        "sound" : "netherite",
-        "textures" : "bao:raw_magnetite_block"
-     },
-     "bao:magnetite_block" : {
-        "sound" : "netherite",
-        "textures" : "bao:magnetite_block"
-     }  
+   "bao:raw_magnetite_block": {
+      "sound": "netherite",
+      "textures": "bao:raw_magnetite_block"
+   },
+   "bao:magnetite_block": {
+      "sound": "netherite",
+      "textures": "bao:magnetite_block"
+   },
+   // Glass
+   "bao:framed_glass": {
+      "sound": "glass",
+      "textures": "bao:framed_glass.normal"
+   },
+   "bao:ornate_framed_glass": {
+      "sound": "glass",
+      "textures": "bao:framed_glass.ornate"
+   },
+   "bao:rounded_framed_glass": {
+      "sound": "glass",
+      "textures": "bao:framed_glass.rounded"
+   },
+   "bao:small_framed_glass": {
+      "sound": "glass",
+      "textures": "bao:framed_glass.small"
+   },
+   "bao:framed_glass_pane": {
+      "sound": "glass"
+   },
+   "bao:small_framed_glass_pane": {
+      "sound": "glass"
+   },
+   "bao:ornate_framed_glass_pane": {
+      "sound": "glass"
+   },
+   "bao:rounded_framed_glass_pane": {
+      "sound": "glass"
+   },
+   "bao:tinted_glass_pane": {
+      "sound": "glass"
+   },
+   "bao:bamboo_paper_panel": {
+      "sound": "bamboo"
+   },
+   // Glowstone
+   "bao:polished_glowstone": {
+      "sound": "glass"
+   },
+   "bao:polished_glowstone_slab": {
+      "sound": "glass"
+   },
+   "bao:polished_glowstone_bricks": {
+      "sound": "glass"
+   },
+   "bao:polished_glowstone_bricks_slab": {
+      "sound": "glass"
+   },
+   "bao:chiseled_polished_glowstone": {
+      "sound": "glass"
+   },
+   "bao:polished_glowstone_pillar": {
+      "sound": "glass"
+   },
+   "bao:shimmer_glass": {
+      "sound": "glass",
+      "textures": "bao:glowstone.glass"
+   },
+   "bao:shimmer_glass_pane": {
+      "sound": "glass"
+   }
 }

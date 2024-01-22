@@ -1,7 +1,89 @@
 {
-   "num_mip_levels" : 4,
-   "padding" : 8,
-   "resource_pack_name" : "vanilla",
-   "texture_data" : {},
-   "texture_name" : "atlas.terrain"
+    "num_mip_levels": 4,
+    "padding": 8,
+    "resource_pack_name": "vanilla",
+    "texture_name": "atlas.terrain",
+    "texture_data": {
+        "bao:invisible": {
+            "textures": "textures/invisible"
+        },
+        "bao:cooking_pot": {
+            "textures": "textures/blocks/workbenches/cooking_pot"
+        },
+        "bao:tinted_glass_top": {
+            "textures": "textures/blocks/tinted_glass_top"
+        },
+        // Glass
+        "bao:framed_glass.normal": {
+            "textures": "textures/blocks/framed_glass/normal"
+        },
+        "bao:framed_glass.ornate": {
+            "textures": "textures/blocks/framed_glass/ornate"
+        },
+        "bao:framed_glass.rounded": {
+            "textures": "textures/blocks/framed_glass/rounded"
+        },
+        "bao:framed_glass.small": {
+            "textures": "textures/blocks/framed_glass/small"
+        },
+        // Glowstone
+        "bao:glowstone.glass": {
+            "textures": "textures/blocks/glowstone/glass"
+        },
+        "bao:glowstone.glass_top": {
+            "textures": "textures/blocks/glowstone/glass_top"
+        },
+        "bao:glowstone.glass_alt": {
+            "textures": "textures/blocks/glowstone/glass_alt"
+        },
+        "bao:glowstone.polished": {
+            "textures": "textures/blocks/glowstone/polished"
+        },
+        "bao:glowstone.bricks": {
+            "textures": "textures/blocks/glowstone/bricks"
+        },
+        "bao:glowstone.chiseled": {
+            "textures": "textures/blocks/glowstone/chiseled"
+        },
+        "bao:glowstone.chiseled_top": {
+            "textures": "textures/blocks/glowstone/chiseled_top"
+        },
+        "bao:glowstone.polished_slab_side": {
+            "textures": "textures/blocks/glowstone/polished_slab_side"
+        },
+        "bao:glowstone.pillar_single": {
+            "textures": "textures/blocks/glowstone/pillar_single"
+        },
+        "bao:glowstone.pillar_up": {
+            "textures": "textures/blocks/glowstone/pillar_up"
+        },
+        "bao:glowstone.pillar_middle": {
+            "textures": "textures/blocks/glowstone/pillar_middle"
+        },
+        "bao:glowstone.pillar_down": {
+            "textures": "textures/blocks/glowstone/pillar_down"
+        },
+        "bao:glowstone.pillar_top": {
+            "textures": "textures/blocks/glowstone/pillar_top"
+        },
+        // Paper Panel
+        "bao:paper_panel.acacia": {
+            "textures": "textures/blocks/paper_panel/acacia"
+        },
+        "bao:paper_panel.bamboo": {
+            "textures": "textures/blocks/paper_panel/bamboo"
+        },
+        "bao:paper_panel.bamboo_ciofag": {
+            "textures": "textures/blocks/paper_panel/bamboo_ciofag"
+        },
+        "bao:paper_panel.bamboo_half": {
+            "textures": "textures/blocks/paper_panel/bamboo_half"
+        },
+        "bao:paper_panel.bamboo_half_ciofag": {
+            "textures": "textures/blocks/paper_panel/bamboo_ciofag"
+        },
+        "bao:paper_panel.bamboo_edge": {
+            "textures": "textures/blocks/paper_panel/bamboo_edge"
+        }
+    }
 }

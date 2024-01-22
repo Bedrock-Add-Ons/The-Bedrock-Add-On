@@ -1,0 +1,24 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bao:framed_glass"
+		},
+		
+		"tags": ["crafting_table"],
+		"unlock": ["minecraft:glass"],
+		
+		"pattern": [
+			" ~ ",
+			"~#~",
+			" ~ "
+		],
+		"key": {
+			"#": "minecraft:glass",
+			"~": "minecraft:iron_nugget"
+		},
+		"result": {
+			"item": "bao:framed_glass"
+		}
+	}
+}

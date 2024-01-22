@@ -1,0 +1,138 @@
+{
+    "format_version": "1.20.41",
+    "minecraft:block": {
+        "description": {
+            "identifier": "bao:polished_glowstone_pillar",
+            "menu_category": {
+                "category": "construction",
+                "group": "itemGroup.name.stoneBrick",
+                "is_hidden_in_commands": false
+            },
+            "states": {
+                "bao:upper_bit": [ false, true ],
+                "bao:lower_bit": [ false, true ]
+            },
+            "traits": {
+                "minecraft:placement_position": {
+                    "enabled_states": [
+                        "minecraft:block_face"
+                    ]
+                }
+            }
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.3
+            },
+            "minecraft:geometry": "geometry.unit_cube",
+            "minecraft:material_instances": {
+                "*": {
+                    "render_method": "opaque",
+                    "ambient_occlusion": false,
+                    "face_dimming": false,
+                    "texture": "bao:glowstone.pillar_single"
+                },
+                "up": {
+                    "ambient_occlusion": false,
+                    "face_dimming": false,
+                    "texture": "bao:glowstone.pillar_top"
+                },
+                "down": {
+                    "ambient_occlusion": false,
+                    "face_dimming": false,
+                    "texture": "bao:glowstone.pillar_top"
+                }
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:light_emission": 15,
+            "minecraft:loot": "loot_tables/blocks/glowstone.json"
+        }, 
+        "permutations": [
+            {
+                "condition": "query.block_state('bao:upper_bit')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "render_method": "opaque",
+                            "ambient_occlusion": false,
+                            "face_dimming": false,
+                            "texture": "bao:glowstone.pillar_up"
+                        },
+                        "up": {
+                            "ambient_occlusion": false,
+                            "face_dimming": false,
+                            "texture": "bao:glowstone.pillar_top"
+                        },
+                        "down": {
+                            "ambient_occlusion": false,
+                            "face_dimming": false,
+                            "texture": "bao:glowstone.pillar_top"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('bao:lower_bit')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "render_method": "opaque",
+                            "ambient_occlusion": false,
+                            "face_dimming": false,
+                            "texture": "bao:glowstone.pillar_down"
+                        },
+                        "up": {
+                            "ambient_occlusion": false,
+                            "face_dimming": false,
+                            "texture": "bao:glowstone.pillar_top"
+                        },
+                        "down": {
+                            "ambient_occlusion": false,
+                            "face_dimming": false,
+                            "texture": "bao:glowstone.pillar_top"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('bao:upper_bit') && query.block_state('bao:lower_bit')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "render_method": "opaque",
+                            "ambient_occlusion": false,
+                            "face_dimming": false,
+                            "texture": "bao:glowstone.pillar_middle"
+                        },
+                        "up": {
+                            "ambient_occlusion": false,
+                            "face_dimming": false,
+                            "texture": "bao:glowstone.pillar_top"
+                        },
+                        "down": {
+                            "ambient_occlusion": false,
+                            "face_dimming": false,
+                            "texture": "bao:glowstone.pillar_top"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('minecraft:block_face') == 'north' || query.block_state('minecraft:block_face') == 'south'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [ 90, 0, 0 ]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('minecraft:block_face') == 'east' || query.block_state('minecraft:block_face') == 'west'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [ 0, 0, 90 ]
+                    }
+                }
+            }
+        ]
+    }
+}
