@@ -6,17 +6,13 @@ pack.description=Resource definitions and assets supporting §o§l§bThe§r §o�
 pack.modules.resources.description=Resource pack for §o§l§bThe§r §o§bBedrock Add-On§r
 
 ### Items
-item.bao:sawed_off_shotgun=Sawed Off Shotgun
-item.bao:shotgun_slug=Shotgun Slug
-item.bao:raw_magnetite=Raw Magnetite
-item.bao:magnetite_ingot=Magnetite Ingot
-item.bao:magnetite_nugget=Magnetite Nugget
-item.bao:magnet=Magnet
+item.bao:magnetite_ingot.name=Magnetite Ingot
+item.bao:raw_magnetite.name=Raw Magnetite
 
 ### Blocks
+tile.bao:raw_magnetite_block.name=Raw Magnetite Block
 tile.bao:magnetite_ore.name=Magnetite Ore
 tile.bao:magnetite_block.name=Magnetite Block
-tile.bao:raw_magnetite_block.name=Raw Magnetite Block
 
 tile.bao:polished_glowstone.name=Polished Glowstone
 tile.bao:polished_glowstone_bricks.name=Polished Glowstone Bricks

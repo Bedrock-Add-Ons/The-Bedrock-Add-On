@@ -1,11 +1,13 @@
 {
+   "format_version": [ 1, 0, 0 ],
+   "bao:magnetite_ore": {
+      "textures": "bao:magnetite_ore", "sound": "netherrack"
+   },
    "bao:raw_magnetite_block": {
-      "sound": "netherite",
-      "textures": "bao:raw_magnetite_block"
+      "textures": "bao:raw_magnetite_block", "sound": "netherite"
    },
    "bao:magnetite_block": {
-      "sound": "netherite",
-      "textures": "bao:magnetite_block"
+      "textures": "bao:magnetite_block", "sound": "netherite"
    },
    // Glass
    "bao:framed_glass": {

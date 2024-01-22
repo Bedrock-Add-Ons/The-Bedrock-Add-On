@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
 	"resource_pack_name": "vanilla",
 	"texture_name": "atlas.items",
 	"texture_data": {
@@ -44,3 +45,12 @@
 		// ----------------- //
     }
 }
+=======
+   "resource_pack_name": "the-bedrock-add-on",
+   "texture_data": {
+      "bao:raw_magnetite": { "textures": "textures/items/raw_magnetite" },
+      "bao:magnetite_ingot": { "textures": "textures/items/magnetite_ingot" }
+   },
+   "texture_name": "atlas.items"
+}
+>>>>>>> main

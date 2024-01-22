@@ -1,0 +1,13 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:item": {
+        "description": {
+            "identifier": "bao:magnetite_ingot",
+            "menu_category": { "category": "Items" }
+        },
+        "components": {
+            "minecraft:display_name": { "value": "item.bao:magnetite_ingot.name" },
+            "minecraft:icon": { "texture": "bao:magnetite_ingot" }
+        }
+    }
+}
