@@ -1,56 +1,21 @@
 {
-<<<<<<< HEAD
-	"resource_pack_name": "vanilla",
-	"texture_name": "atlas.items",
-	"texture_data": {
-		// ----------------- //
-		// ----- Gear ------ //
-		// ----------------- //
-
-		// Soul Steel
-		"soul_steel.nugget": { "textures": "textures/items/soul_steel/nugget" },
-        "soul_steel.ingot": { "textures": "textures/items/soul_steel/ingot" },
-
-		"soul_steel.pickaxe": { "textures": "textures/items/soul_steel/pickaxe" },
-		"soul_steel.shovel": { "textures": "textures/items/soul_steel/shovel" },
-		"soul_steel.axe": { "textures": "textures/items/soul_steel/axe" },
-		"soul_steel.hoe": { "textures": "textures/items/soul_steel/hoe" },
-		"soul_steel.sword": { "textures": "textures/items/soul_steel/sword" },
-		"soul_steel.scythe": { "textures": "textures/items/soul_steel/scythe" },
-
-		"soul_steel.helmet": { "textures": "textures/items/soul_steel/helmet" },
-		"soul_steel.chestplate": { "textures": "textures/items/soul_steel/chestplate" },
-		"soul_steel.leggings": { "textures": "textures/items/soul_steel/leggings" },
-		"soul_steel.boots": { "textures": "textures/items/soul_steel/boots" },
-
-		//
-
-		// ----------------- //
-		// ---- Utility ---- //
-		// ----------------- //
-
-		"moss_clump": { "textures": "textures/items/moss_clump" }
-
-		// ----------------- //
-		// --- Cosmetic ---- //
-		// ----------------- //
-
-		
-		// ----------------- //
-		// ----- Food ------ //
-		// ----------------- //
-
-		// ----------------- //
-		// ----- Misc ------ //
-		// ----------------- //
+    "resource_pack_name": "the-bedrock-add-on",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "bao:raw_magnetite": {"textures": "textures/items/raw_magnetite"},
+        "bao:magnetite_ingot": {"textures": "textures/items/magnetite_ingot"},
+        "bao:soul_steel.nugget": {"textures": "textures/items/soul_steel/nugget"},
+        "bao:soul_steel.ingot": {"textures": "textures/items/soul_steel/ingot"},
+        "bao:soul_steel.pickaxe": {"textures": "textures/items/soul_steel/pickaxe"},
+        "bao:soul_steel.shovel": {"textures": "textures/items/soul_steel/shovel"},
+        "bao:soul_steel.axe": {"textures": "textures/items/soul_steel/axe"},
+        "bao:soul_steel.hoe": {"textures": "textures/items/soul_steel/hoe"},
+        "bao:soul_steel.sword": {"textures": "textures/items/soul_steel/sword"},
+        "bao:soul_steel.scythe": {"textures": "textures/items/soul_steel/scythe"},
+        "bao:soul_steel.helmet": {"textures": "textures/items/soul_steel/helmet"},
+        "bao:soul_steel.chestplate": {"textures": "textures/items/soul_steel/chestplate"},
+        "bao:soul_steel.leggings": {"textures": "textures/items/soul_steel/leggings"},
+        "bao:soul_steel.boots": {"textures": "textures/items/soul_steel/boots"},
+        "bao:moss_clump": {"textures": "textures/items/moss_clump"}
     }
 }
-=======
-   "resource_pack_name": "the-bedrock-add-on",
-   "texture_data": {
-      "bao:raw_magnetite": { "textures": "textures/items/raw_magnetite" },
-      "bao:magnetite_ingot": { "textures": "textures/items/magnetite_ingot" }
-   },
-   "texture_name": "atlas.items"
-}
->>>>>>> main
