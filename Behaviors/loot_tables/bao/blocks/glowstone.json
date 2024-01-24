@@ -1,0 +1,60 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item", "name": "minecraft:glowstone_dust",
+                    "functions": [
+                        { "function": "set_count", "count": { "min": 2, "max": 4 } }
+                    ],
+                    "conditions": [
+                        { "condition": "match_tool", "enchantments": [ { "enchantment": "fortune", "levels": 0 } ] }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item", "name": "minecraft:glowstone_dust",
+                    "functions": [
+                        { "function": "set_count", "count": { "min": 3, "max": 4 } }
+                    ],
+                    "conditions": [
+                        { "condition": "match_tool", "enchantments": [ { "enchantment": "fortune", "levels": 1 } ] }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item", "name": "minecraft:glowstone_dust",
+                    "functions": [
+                        { "function": "set_count", "count": { "min": 3, "max": 4 } }
+                    ],
+                    "conditions": [
+                        { "condition": "match_tool", "enchantments": [ { "enchantment": "fortune", "levels": 2 } ] }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item", "name": "minecraft:glowstone_dust",
+                    "functions": [
+                        { "function": "set_count", "count": { "min": 4, "max": 4 } }
+                    ],
+                    "conditions": [
+                        { "condition": "match_tool", "enchantments": [ { "enchantment": "fortune", "levels": 3 } ] }
+                    ]
+                }
+            ]
+        }
+    ]
+}
