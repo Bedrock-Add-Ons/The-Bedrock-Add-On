@@ -4,18 +4,17 @@
 		"description": {
 			"identifier": "bao:raw_magnetite_block"
 		},
-		
-		"tags": ["crafting_table"],
-		"unlock": ["bao:raw_magnetite"],
-		
+
+		"tags": [ "crafting_table" ],
+		"unlock": [ "bao:raw_magnetite" ],
+
 		"pattern": [
 			"///",
 			"///",
 			"///"
 		],
-		"key": {
-			"/": "bao:raw_magnetite"
-		},
+		"key": { "/": "bao:raw_magnetite" },
+
 		"result": "bao:raw_magnetite_block"
 	}
 }

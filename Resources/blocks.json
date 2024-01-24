@@ -1,7 +1,7 @@
 {
    "format_version": [ 1, 0, 0 ],
    "bao:magnetite_ore": {
-      "textures": "bao:magnetite_ore", "sound": "netherrack"
+      "textures": "bao:magnetite_ore", "sound": "gilded_blackstone"
    },
    "bao:raw_magnetite_block": {
       "textures": "bao:raw_magnetite_block", "sound": "netherite"
