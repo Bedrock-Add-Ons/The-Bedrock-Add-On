@@ -1,5 +1,5 @@
 import { world, system } from "@minecraft/server";
 
 system.run(() => {
-    world.getDimension(`overworld`).runCommand(`gamerule playerssleepingpercentage 34`)
+    world.getDimension(`overworld`).runCommandAsync(`gamerule playerssleepingpercentage 34`)
 });
