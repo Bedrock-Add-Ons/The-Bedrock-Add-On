@@ -1,22 +1,22 @@
 {
 	"format_version": "1.20.10",
-	
+
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "minecraft:brewing_stand_from_blackstone"
+			"identifier": "minecraft:brewing_stand_from_cobbled_deepslate"
 		},
-		
-		"tags": ["deprecated"],
-		"unlock": ["minecraft:blaze_rod"],
+
+		"tags": [ "deprecated" ],
+		"unlock": [ "minecraft:blaze_rod" ],
 		"priority": 2,
-		
+
 		"pattern": [
 			" B ",
 			"###"
 		],
 		"key": {
 			"B": "minecraft:blaze_rod",
-			"#": "minecraft:blackstone"
+			"#": "minecraft:cobbled_deepslate"
 		},
 		"result": "minecraft:brewing_stand"
 	}

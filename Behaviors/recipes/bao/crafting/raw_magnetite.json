@@ -1,0 +1,18 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bao:raw_magnetite"
+		},
+
+		"tags": [ "crafting_table" ],
+		"unlock": [ "bao:raw_magnetite" ],
+
+		"pattern": [
+			"/"
+		],
+		"key": { "/": "bao:raw_magnetite_block" },
+
+		"result": "bao:raw_magnetite", "count": 9
+	}
+}

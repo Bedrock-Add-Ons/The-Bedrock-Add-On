@@ -1,14 +1,13 @@
 {
 	"format_version": "1.20.10",
-	
 	"minecraft:recipe_shaped": {
 		"description": {
 			"identifier": "minecraft:brewing_stand"
 		},
-		
-		"tags": ["crafting_table"],
-		"unlock": ["minecraft:blaze_rod"],
-		
+
+		"tags": [ "crafting_table" ],
+		"unlock": [ "minecraft:blaze_rod" ],
+
 		"pattern": [
 			"NBN",
 			" B ",

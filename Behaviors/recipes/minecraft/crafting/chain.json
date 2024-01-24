@@ -1,24 +1,20 @@
 {
-    "format_version": "1.16",
+    "format_version": "1.20.50",
     "minecraft:recipe_shaped": {
         "description": {
             "identifier": "minecraft:chain"
         },
-        "tags": [
-            "crafting_table"
-        ],
+        "tags": [ "crafting_table" ],
+        "unlock": [ "minecraft:iron_ingot" ],
+
         "pattern": [
             "N",
             "G",
             "N"
         ],
         "key": {
-            "N": {
-                "item": "iron_nugget"
-            },
-            "G": {
-                "item": "iron_ingot"
-            }
+            "N": { "item": "iron_nugget" },
+            "G": { "item": "iron_ingot" }
         },
         "result": {
             "item": "chain",
