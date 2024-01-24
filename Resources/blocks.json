@@ -9,22 +9,17 @@
    "bao:magnetite_block": {
       "textures": "bao:magnetite_block", "sound": "netherite"
    },
-   // Glass
    "bao:framed_glass": {
-      "sound": "glass",
-      "textures": "bao:framed_glass.normal"
+      "textures": "bao:framed_glass.normal", "sound": "glass"
    },
    "bao:ornate_framed_glass": {
-      "sound": "glass",
-      "textures": "bao:framed_glass.ornate"
+      "textures": "bao:framed_glass.ornate", "sound": "glass"
    },
    "bao:rounded_framed_glass": {
-      "sound": "glass",
-      "textures": "bao:framed_glass.rounded"
+      "textures": "bao:framed_glass.rounded", "sound": "glass"
    },
    "bao:small_framed_glass": {
-      "sound": "glass",
-      "textures": "bao:framed_glass.small"
+      "textures": "bao:framed_glass.small", "sound": "glass"
    },
    "bao:framed_glass_pane": {
       "sound": "glass"
@@ -44,7 +39,6 @@
    "bao:bamboo_paper_panel": {
       "sound": "bamboo"
    },
-   // Glowstone
    "bao:polished_glowstone": {
       "sound": "glass"
    },
@@ -64,8 +58,7 @@
       "sound": "glass"
    },
    "bao:shimmer_glass": {
-      "sound": "glass",
-      "textures": "bao:glowstone.glass"
+      "textures": "bao:glowstone.glass", "sound": "glass"
    },
    "bao:shimmer_glass_pane": {
       "sound": "glass"

@@ -15,7 +15,6 @@
         "bao:soul_steel.helmet": {"textures": "textures/items/soul_steel/helmet"},
         "bao:soul_steel.chestplate": {"textures": "textures/items/soul_steel/chestplate"},
         "bao:soul_steel.leggings": {"textures": "textures/items/soul_steel/leggings"},
-        "bao:soul_steel.boots": {"textures": "textures/items/soul_steel/boots"},
-        "bao:moss_clump": {"textures": "textures/items/moss_clump"}
+        "bao:soul_steel.boots": {"textures": "textures/items/soul_steel/boots"}
     }
 }

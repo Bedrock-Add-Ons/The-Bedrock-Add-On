@@ -8,7 +8,7 @@
 		
 		"tags": ["furnace"],
 		
-		"input": "minecraft:glowstone_dust",
+		"input": "minecraft:glowstone",
 		"output": "bao:shimmer_glass"
 	}
 }

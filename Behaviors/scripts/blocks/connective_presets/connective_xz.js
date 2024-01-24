@@ -9,8 +9,7 @@ const blockConnectiveXZ = [
     `bao:rounded_framed_glass_pane`,
     `bao:shimmer_glass_pane`,
     `bao:tinted_glass_pane`,
-    `bao:bamboo_paper_panel`,
-    `bao:bamboo_paper_panel_for_chrisfag`
+    `bao:bamboo_paper_panel`
 ]
 
 function connectAny(block, item, direction) {

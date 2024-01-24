@@ -309,7 +309,13 @@ const replaceableBlocks = [
     "minecraft:flowing_lava",
     "minecraft:seagrass",
     "minecraft:tallgrass",
-    "minecraft:double_plant"
+    "minecraft:double_plant",
+    "minecraft:glow_lichen",
+    "minecraft:sculk_vein",
+    "minecraft:snow_layer",
+    "minecraft:nether_sprouts",
+    "minecraft:deadbush",
+    "minecraft:snow_layer"
 ]
 
 export function isReplaceable(block) {
