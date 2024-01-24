@@ -1,0 +1,168 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:block": {
+        "description": {
+            "identifier": "bao:polished_glowstone_slab",
+            "menu_category": {
+                "category": "none",
+                "is_hidden_in_commands": true
+            },
+            "states": {
+                "bao:double_slab": [ false, true ]
+            },
+            "traits": {
+                "minecraft:placement_position": {
+                    "enabled_states": [
+                        "minecraft:vertical_half"
+                    ]
+                }
+            }
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.3
+            },
+            "minecraft:geometry": "geometry.slab_lower",
+            "minecraft:collision_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    8,
+                    16
+                ]
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    8,
+                    16
+                ]
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "render_method": "opaque",
+                    "ambient_occlusion": false,
+                    "face_dimming": false,
+                    "texture": "bao:glowstone.polished_slab_side"
+                },
+                "up": {
+                    "ambient_occlusion": false,
+                    "face_dimming": false,
+                    "texture": "bao:glowstone.polished"
+                },
+                "down": {
+                    "ambient_occlusion": false,
+                    "face_dimming": false,
+                    "texture": "bao:glowstone.polished"
+                }
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:light_emission": 15,
+            "minecraft:loot": "loot_tables/blocks/glowstone_lesser.json"
+        },
+        "permutations": [
+            {
+                "condition": "query.block_state('minecraft:vertical_half') == 'top' && query.block_state('bao:double_slab') == false",
+                "components": {
+                    "minecraft:geometry": "geometry.slab_upper",
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -8,
+                            8,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            8,
+                            16
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            8,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            8,
+                            16
+                        ]
+                    },
+                    "minecraft:loot": "loot_tables/blocks/glowstone_lesser.json"
+                }
+            },
+            {
+                "condition": "query.block_state('minecraft:vertical_half') == 'bottom' && query.block_state('bao:double_slab') == false",
+                "components": {
+                    "minecraft:geometry": "geometry.slab_lower",
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            8,
+                            16
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            8,
+                            16
+                        ]
+                    },
+                    "minecraft:loot": "loot_tables/blocks/glowstone_lesser.json"
+                }
+            },
+            {
+                "condition": "query.block_state('bao:double_slab') == true",
+                "components": {
+                    "minecraft:geometry": "geometry.unit_cube",
+                    "minecraft:collision_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            16,
+                            16
+                        ]
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            16,
+                            16
+                        ]
+                    },
+                    "minecraft:loot": "loot_tables/blocks/glowstone.json"
+                }
+            }
+        ]
+    }
+}

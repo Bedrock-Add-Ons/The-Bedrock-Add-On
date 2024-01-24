@@ -1,0 +1,103 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.panel",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "north",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-1, 0, -8],
+							"size": [2, 16, 9],
+							"uv": {
+								"north": {"uv": [7, 0], "uv_size": [2, 16], "material_instance": "edge"},
+								"east": {"uv": [7, 0], "uv_size": [9, 16]},
+								"west": {"uv": [0, 0], "uv_size": [9, 16]},
+								"up": {"uv": [9, 9], "uv_size": [-2, -9], "material_instance": "edge"},
+								"down": {"uv": [9, 16], "uv_size": [-2, -9], "material_instance": "edge"}
+							}
+						}
+					]
+				},
+				{
+					"name": "south",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-1, 0, -1],
+							"size": [2, 16, 9],
+							"uv": {
+								"east": {"uv": [0, 0], "uv_size": [9, 16]},
+								"south": {"uv": [7, 0], "uv_size": [2, 16], "material_instance": "edge"},
+								"west": {"uv": [7, 0], "uv_size": [9, 16]},
+								"up": {"uv": [9, 16], "uv_size": [-2, -9], "material_instance": "edge"},
+								"down": {"uv": [9, 9], "uv_size": [-2, -9], "material_instance": "edge"}
+							}
+						}
+					]
+				},
+				{
+					"name": "east",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 0, -1],
+							"size": [9, 16, 2],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [9, 16]},
+								"east": {"uv": [7, 0], "uv_size": [2, 16], "material_instance": "edge"},
+								"south": {"uv": [7, 0], "uv_size": [9, 16]},
+								"up": {"uv": [16, 9], "uv_size": [-9, -2], "material_instance": "edge"},
+								"down": {"uv": [16, 9], "uv_size": [-9, -2], "material_instance": "edge"}
+							}
+						}
+					]
+				},
+				{
+					"name": "west",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-1, 0, -1],
+							"size": [9, 16, 2],
+							"uv": {
+								"north": {"uv": [7, 0], "uv_size": [9, 16]},
+								"south": {"uv": [0, 0], "uv_size": [9, 16]},
+								"west": {"uv": [7, 0], "uv_size": [2, 16], "material_instance": "edge"},
+								"up": {"uv": [9, 9], "uv_size": [-9, -2], "material_instance": "edge"},
+								"down": {"uv": [9, 9], "uv_size": [-9, -2], "material_instance": "edge"}
+							}
+						}
+					]
+				},
+				{
+					"name": "node",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-1, 0, -1],
+							"size": [2, 16, 2],
+							"uv": {
+								"north": {"uv": [7, 0], "uv_size": [2, 16]},
+								"east": {"uv": [7, 0], "uv_size": [2, 16]},
+								"south": {"uv": [7, 0], "uv_size": [2, 16]},
+								"west": {"uv": [7, 0], "uv_size": [2, 16]},
+								"up": {"uv": [9, 9], "uv_size": [-2, -2], "material_instance": "edge"},
+								"down": {"uv": [9, 9], "uv_size": [-2, -2], "material_instance": "edge"}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

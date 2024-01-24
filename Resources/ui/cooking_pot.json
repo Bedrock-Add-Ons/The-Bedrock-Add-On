@@ -1,0 +1,433 @@
+{
+  "namespace": "cooking_pot",
+  "item_renderer": {
+    "type": "custom",
+    "renderer": "inventory_item_renderer",
+    "size": [ 16, 16 ],
+    "bindings": [
+      {
+        "binding_name": "#item_id_aux",
+        "binding_type": "collection",
+        "binding_collection_name": "$item_collection_name"
+      }
+    ]
+  },
+  "input_grid_panel": {
+    "type": "panel",
+    "grid_position": [
+      0,
+      0
+    ],
+    "ignored": true
+  },
+  "items_uv": {
+    "anim_type": "flip_book",
+    "initial_uv": [
+      0,
+      0
+    ],
+    "frame_count": 5,
+    "frame_step": 16,
+    "fps": 0.333,
+    "reversible": false,
+    "easing": "linear"
+  },
+  "items": {
+    "$item_collection_name": "crafting_input_items",
+    "type": "image",
+    "layer": 0,
+    "texture": "textures/ui/cooking_pot/items",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": [
+      0,
+      0
+    ],
+    "size": [
+      80,
+      16
+    ],
+    "uv_size": [
+      16,
+      16
+    ],
+    "uv": "@cooking_pot.items_uv",
+    "disable_anim_fast_forward": true//,
+    //"bindings": [
+    //  {
+    //    "binding_name": "#item_id_aux",
+    //    "binding_type": "collection",
+    //    "binding_collection_name": "crafting_input_items"
+    //  },
+    //  {
+    //    "binding_type": "view",
+    //    "source_property_name": "(#item_id_aux = 0)",
+    //    "target_property_name": "#visible"
+    //  }
+    //]
+  },
+  "bubbles_uv": {
+    "anim_type": "flip_book",
+    "initial_uv": [
+      0,
+      0
+    ],
+    "frame_count": 4,
+    "frame_step": 34,
+    "fps": 8,
+    "reversible": false,
+    "easing": "linear"
+  },
+  "bubbles": {
+    "$item_collection_name": "crafting_input_items",
+    "type": "image",
+    "layer": 10,
+    "texture": "textures/ui/cooking_pot/bubbles",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": [
+      0,
+      0
+    ],
+    "size": [
+      136,
+      13
+    ],
+    "uv_size": [
+      34,
+      13
+    ],
+    "uv": "@cooking_pot.bubbles_uv",
+    "disable_anim_fast_forward": true
+  },
+  "pipes": {
+    "type": "image",
+    "layer": 4,
+    "texture": "textures/ui/cooking_pot/thing",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [
+      115,
+      52
+    ]
+  },
+  "custom_crafting_grid_3x3": {
+    "type": "grid",
+    "collection_name": "crafting_input_items",
+    "size": [
+      70,
+      70
+    ],
+    "layer": 3,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "grid_dimensions": [
+      3,
+      3
+    ],
+    "controls": [
+      {
+        "top_left@input_grid_panel": {
+          "grid_position": [
+            0,
+            0
+          ],
+          "ignored": false,
+          "controls": [
+            {
+              "left_top@crafting.crafting_input_grid_item": {
+                "offset": [
+                  -9.5,
+                  20.5
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "top_middle@input_grid_panel": {
+          "$item_collection_name": "crafting_input_items",
+          "grid_position": [
+            1,
+            0
+          ],
+          "ignored": false
+        }
+      },
+      {
+        "top_right@input_grid_panel": {
+          "grid_position": [
+            2,
+            0
+          ],
+          "ignored": true
+        }
+      },
+      {
+        "middle_left@input_grid_panel": {
+          "grid_position": [
+            0,
+            1
+          ],
+          "ignored": false,
+          "controls": [
+            {
+              "top_middle@crafting.crafting_input_grid_item": {
+                "$item_collection_name": "crafting_input_items",
+                "offset": [
+                  31.5,
+                  2
+                ]//,
+                //"$cell_overlay_ref": "cooking_pot.items"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "middle@input_grid_panel": {
+          "grid_position": [
+            1,
+            1
+          ],
+          "ignored": true
+        }
+      },
+      {
+        "middle_right@input_grid_panel": {
+          "grid_position": [
+            2,
+            1
+          ],
+          "ignored": true
+        }
+      },
+      {
+        "bottom_left@input_grid_panel": {
+          "grid_position": [
+            0,
+            2
+          ],
+          "ignored": true
+        }
+      },
+      {
+        "bottom_middle@input_grid_panel": {
+          "grid_position": [
+            1,
+            2
+          ],
+          "ignored": true
+        }
+      },
+      {
+        "bottom_right@input_grid_panel": {
+          "grid_position": [
+            2,
+            2
+          ],
+          "ignored": true
+        }
+      }
+    ]
+  },
+  "custom_work_bench_panel_3x3": {
+    "type": "panel",
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "controls": [
+      {
+        "pipes@cooking_pot.pipes": {
+          "offset": [
+            -0.5,
+            0
+          ]
+        }
+      },
+      {
+        "bubbles@cooking_pot.bubbles": {
+          "offset": [
+            -33,
+            -19.5
+          ]
+        }
+      },
+      {
+        "inventory@crafting.inventory_label": {
+          "offset": [
+            9,
+            90
+          ]
+        }
+      },
+      {
+        "page_text": {
+          "type": "label",
+          "offset": [ 0, 5 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "text": "Cooking Pot",
+          "color": "$title_text_color",
+          "layer": 2
+        }
+      },
+      {
+        "inventory_label@crafting.inventory_label": {
+          "offset": [
+            -21,
+            72
+          ],
+          "ignored": true
+        }
+      },
+      {
+        "crafting_grid_3x3@custom_crafting_grid_3x3": {
+          "layer": 1,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "work_bench_output_grid@crafting.output_grid_3x3": {
+          "offset": [
+            44,
+            2
+          ],
+          "anchor_to": "center",
+          "anchor_from": "center"
+        }
+      }
+    ]
+  },
+  "custom_crafting_panel_top_half": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "50%"
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      {
+        "crafting_panel@custom_work_bench_panel_3x3": {
+          "offset": [
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  "custom_player_inventory@common.root_panel": {
+    "layer": 1,
+    "size": [
+      180,
+      180
+    ],
+    "controls": [
+      {
+        "common_panel@common.common_panel": {
+          "offset": [
+            0,
+            0
+          ],
+          "$show_close_button": true
+        }
+      },
+      {
+        "inventory_panel_top_half@$top_half_variant": {
+          "layer": 2
+        }
+      },
+      {
+        "inventory_panel_bottom_half@common.inventory_panel_bottom_half": {
+          "layer": 2,
+          "$button_ref": "crafting.inventory_container_slot_button",
+          "$background_images": "crafting.container_cell_images"
+        }
+      },
+      {
+        "hotbar_grid@common.hotbar_grid_template": {
+          "layer": 2,
+          "$button_ref": "crafting.inventory_container_slot_button",
+          "$background_images": "crafting.container_cell_images"
+        }
+      }
+    ]
+  },
+  "item_control": {
+    "type": "panel",
+    "controls": [
+      {
+        "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
+      },
+      {
+        "inventory_selected_icon_button@common.inventory_selected_icon_button": {}
+      },
+      {
+        "hold_icon@common.inventory_take_progress_icon_button": {}
+      },
+      {
+        "controller_gamepad_helpers_stack_panel": {
+          "type": "stack_panel",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "controls": [
+            {
+              "container_gamepad_helpers_second_row@crafting.container_gamepad_helpers_second_row": {}
+            },
+            {
+              "container_gamepad_helpers@common.container_gamepad_helpers": {
+                "$helper_x_control": "crafting.inventory_x_gamepad_helper",
+                "$helper_y_control": "crafting.inventory_y_gamepad_helper",
+                "$helper_a_control": "crafting.inventory_a_gamepad_helper"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#gamepad_helper_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 13
+        }
+      },
+      {
+        "selected_item_details_factory@common.selected_item_details_factory": {}
+      },
+      {
+        "item_lock_notification_factory@common.item_lock_notification_factory": {}
+      }
+    ]
+  },
+  "final_panel": {
+    "type": "panel",
+    "$top_half_variant": "custom_crafting_panel_top_half",
+    "controls": [
+      {
+        "cpi@custom_player_inventory": {}
+      },
+      {
+        "icontrol@item_control": {}
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#crafting_label_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#crafting_label_text = container.cooking_pot)",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

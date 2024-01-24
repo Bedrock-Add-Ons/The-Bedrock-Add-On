@@ -1,0 +1,14 @@
+{
+	"format_version": "1.20.10",
+	
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "bao:shimmer_glass"
+		},
+		
+		"tags": ["furnace"],
+		
+		"input": "minecraft:glowstone",
+		"output": "bao:shimmer_glass"
+	}
+}

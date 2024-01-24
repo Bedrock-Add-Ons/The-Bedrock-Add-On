@@ -1,0 +1,24 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "bao:rounded_framed_glass_pane_from_pane_stonecutting"
+    },
+    "tags": [ "stonecutter" ],
+    "priority": 2,
+    "ingredients": [
+      {
+        "item": "bao:framed_glass_pane"
+      }
+    ],
+    "unlock": [
+      {
+        "item": "bao:framed_glass_pane"
+      }
+    ],
+    "result": {
+      "item": "bao:rounded_framed_glass_pane",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bao:polished_glowstone_pillar"
+		},
+		
+		"tags": ["crafting_table"],
+		"unlock": ["bao:polished_glowstone"],
+		
+		"pattern": [
+			"#",
+			"#"
+		],
+		"key": {
+			"#": "bao:polished_glowstone"
+		},
+		"result": {
+			"item": "bao:polished_glowstone_pillar",
+			"count": 2
+		}
+	}
+}

@@ -3,7 +3,7 @@
 
 	"minecraft:recipe_furnace": {
 		"description": {
-			"identifier": "bao:furnace_rotten_flesh"
+			"identifier": "bao:leather_from_rotten_flesh"
 		},
 
 		"tags": [ "furnace", "smoker", "campfire", "soul_campfire" ],

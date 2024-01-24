@@ -1,0 +1,23 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bao:ornate_framed_glass_pane"
+		},
+		
+		"tags": ["crafting_table"],
+		"unlock": ["bao:framed_glass"],
+		
+		"pattern": [
+			"###",
+			"###"
+		],
+		"key": {
+			"#": "bao:ornate_framed_glass"
+		},
+		"result": {
+			"item": "bao:ornate_framed_glass_pane",
+			"count": 16
+		}
+	}
+}

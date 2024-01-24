@@ -1,0 +1,24 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "bao:small_framed_glass_from_ornate_stonecutting"
+    },
+    "tags": [ "stonecutter" ],
+    "priority": 2,
+    "ingredients": [
+      {
+        "item": "bao:ornate_framed_glass"
+      }
+    ],
+    "unlock": [
+      {
+        "item": "bao:ornate_framed_glass"
+      }
+    ],
+    "result": {
+      "item": "bao:small_framed_glass",
+      "count": 1
+    }
+  }
+}

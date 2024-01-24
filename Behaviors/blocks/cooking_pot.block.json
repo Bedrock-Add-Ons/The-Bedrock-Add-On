@@ -1,0 +1,168 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:block": {
+        "description": {
+            "identifier": "bao:cooking_pot",
+            "menu_category": {
+                "category": "items",
+                "is_hidden_in_commands": false
+            },
+            "states": {
+                "bao:direction": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "bao:is_placed": [
+                    false,
+                    true
+                ]
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "y_rotation_offset": 180,
+                    "enabled_states": [ "minecraft:cardinal_direction" ]
+                }
+            }
+        },
+        "permutations": [
+            // North
+            {
+                "condition": "query.block_state('bao:direction') == 2",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            180,
+                            0
+                        ]
+                    }
+                }
+            },
+            // East
+            {
+                "condition": "query.block_state('bao:direction') == 3",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ]
+                    }
+                }
+            },
+            // South
+            {
+                "condition": "query.block_state('bao:direction') == 0",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            // West
+            {
+                "condition": "query.block_state('bao:direction') == 1",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            270,
+                            0
+                        ]
+                    }
+                }
+            },
+            //
+            {
+                "condition": "!query.block_state('bao:is_placed') && query.block_state('minecraft:cardinal_direction') != 'south'",
+                "components": {
+                    "minecraft:geometry": "geometry.invisible"
+                }
+            },
+            {
+                "condition": "query.block_state('bao:is_placed')",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.cooking_pot",
+                        "bone_visibility": {
+                            "legs": "query.block_state('bao:is_placed')"
+                        }
+                    }
+                }
+            }
+        ],
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.5
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 0
+            },
+            "minecraft:flammable": false,
+            "minecraft:light_dampening": 1,
+            "minecraft:collision_box": {
+                "origin": [
+                    -5,
+                    0,
+                    -5
+                ],
+                "size": [
+                    10,
+                    6,
+                    10
+                ]
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -5,
+                    0,
+                    -5
+                ],
+                "size": [
+                    10,
+                    6,
+                    10
+                ]
+            },
+            "minecraft:geometry": {
+                "identifier": "geometry.cooking_pot",
+                "bone_visibility": {
+                    "legs": "query.block_state('bao:is_placed')"
+                }
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "bao:cooking_pot",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": [
+                            "up"
+                        ],
+                        "block_filter": [
+                            "minecraft:campfire",
+                            "minecraft:soul_campfire",
+                            "minecraft:magma"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:crafting_table": {
+                "table_name": "container.cooking_pot",
+                "crafting_tags": [
+                    "cooking_pot"
+                ]
+            }
+        }
+    }
+}
