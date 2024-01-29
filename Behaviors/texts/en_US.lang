@@ -5,13 +5,4 @@ pack.description=Resource definitions and assets supporting §o§l§bThe§r §o�
 ### Modules
 pack.modules.resources.description=Resource pack for §o§l§bThe§r §o§bBedrock Add-On§r
 
-### Items
-item.bao:sawed_off_shotgun=Sawed Off Shotgun
-item.bao:raw_magnetite=Raw Magnetite
-item.bao:magnetite_ingot=Magnetite Ingot
-item.bao:magnetite_nugget=Magnetite Nugget
-item.bao:magnet=Magnet
-
-### blocks
-
 

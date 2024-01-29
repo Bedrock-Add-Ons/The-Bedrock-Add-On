@@ -1,0 +1,25 @@
+{
+    "format_version": "1.16",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "minecraft:cobbled_deepslate_stairs"
+        },
+        "key": {
+            "#": {
+                "item": "minecraft:cobbled_deepslate"
+            }
+        },
+        "pattern": [
+            "#",
+            "##"
+        ],
+        "priority": 1,
+        "result": {
+            "count": 3,
+            "item": "minecraft:cobbled_deepslate_stairs"
+        },
+        "tags": [
+            "crafting_table"
+        ]
+    }
+}
