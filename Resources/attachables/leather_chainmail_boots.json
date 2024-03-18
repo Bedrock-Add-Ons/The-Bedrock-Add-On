@@ -1,0 +1,19 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "minecraft:chainmail_boots",
+
+			"geometry": { "default": "geometry.player.armor.boots" },
+			"textures": { "default": "textures/models/armor/leather_chainmail_primary", "enchanted": "textures/misc/enchanted_actor_glint" },
+			"materials": { "default": "armor", "enchanted": "armor_enchanted" },
+			"render_controllers": [ "controller.render.armor" ],
+
+			"animations": { "offset": "animation.armor.boots.offset" },
+			"scripts": {
+				"parent_setup": "variable.boot_layer_visible = 0.0;",
+				"animate": [ "offset" ]
+			}
+		}
+	}
+}

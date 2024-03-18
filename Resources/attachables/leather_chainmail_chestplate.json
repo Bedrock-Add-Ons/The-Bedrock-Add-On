@@ -1,0 +1,19 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "minecraft:chainmail_chestplate",
+
+			"textures": { "default": "textures/models/armor/leather_chainmail_primary", "enchanted": "textures/misc/enchanted_actor_glint" },
+			"geometry": { "default": "geometry.player.armor.chestplate" },
+			"materials": { "default": "armor", "enchanted": "armor_enchanted" },
+			"render_controllers": [ "controller.render.armor" ],
+
+			"animations": { "offset": "animation.armor.chestplate.offset" },
+			"scripts": {
+				"parent_setup": "variable.chest_layer_visible = 0.0;",
+				"animate": [ "offset" ]
+			}
+		}
+	}
+}
